@@ -1,0 +1,14 @@
+{
+  "name": "grupo-6-tecnogamer",
+  "version": "1.0.0",
+  "description": "Nuestro Market Place, \"TecnoGamer\", se especializa en la venta de una amplia gama de productos relacionados con el mundo gamer, dirigidos a todo el mercado de Latinoamérica. En LatamGamer, los usuarios podrán encontrar productos tales como:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
