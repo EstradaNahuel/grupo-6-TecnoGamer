@@ -4,7 +4,8 @@
   "description": "Nuestro Market Place, \"TecnoGamer\", se especializa en la venta de una amplia gama de productos relacionados con el mundo gamer, dirigidos a todo el mercado de Latinoamérica. En LatamGamer, los usuarios podrán encontrar productos tales como:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
