@@ -1,0 +1,10 @@
+#banner {
+    width: 1000px;
+}
+#menu1 .item {
+    font: arial;
+    display:inline;
+    padding-left:3px;
+    padding-right:3px;
+   background-color:black;
+}
