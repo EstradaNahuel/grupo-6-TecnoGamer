@@ -11,6 +11,14 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
+app.get('/register', (req,res)=>{
+  res.sendFile(__dirname + '/views/register.html');
+});
+
+app.get('/login', (req,res)=>{
+  res.sendFile(__dirname + '/views/login.html');
+});
+
 app.listen(3020, () => {
   console.log("Success");
 });
