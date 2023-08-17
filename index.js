@@ -19,6 +19,9 @@ app.get('/login', (req,res)=>{
   res.sendFile(__dirname + '/views/login.html');
 });
 
+app.get('/productcart', (req,res)=>{
+  res.sendFile(__dirname + '/views/productcart.html');
+});
 app.listen(3020, () => {
   console.log("Success");
 });
