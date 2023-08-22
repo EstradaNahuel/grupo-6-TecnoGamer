@@ -2,6 +2,9 @@
     font-family: Arial, sans-serif;
     max-width: 400px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 8px;
 }
 
 .signup ul {
@@ -17,7 +20,7 @@
 .signup label {
     display: block;
     font-size: 0.9em;
-    color: #060606;
+    color: #000000;
 }
 
 .signup input[type="text"],
@@ -34,7 +37,7 @@
 .signup input[type="submit"] {
     width: 100%;
     background-color: #e40808;
-    color: rgb(5, 5, 5);
+    color: rgb(255, 255, 255);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -43,5 +46,5 @@
 }
 
 .signup input[type="submit"]:hover {
-    background-color: #ec0909;
+    background-color: #070707;
 }
