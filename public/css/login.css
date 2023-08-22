@@ -1,0 +1,47 @@
+.loginform {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 8px;
+}
+
+.loginform ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.loginform li {
+    margin-bottom: 10px;
+}
+
+.loginform label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.loginform input[type="email"],
+.loginform input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border:  2px solid #f50707;
+}
+
+.loginform input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #ee1212;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.loginform input[type="submit"]:hover {
+    background-color: #000000;
+}
