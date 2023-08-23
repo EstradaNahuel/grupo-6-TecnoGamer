@@ -203,17 +203,16 @@ h1, h2 {
 
 .text-discount {
     margin :1px ;
-    font-size :12px ;
-    padding-left :1px ;
-    display :inline ;
+    font-size :10px ;
+    display: inline ;
     width :7.2px ;
+    text-align: center;
 }
 
 .text-desc {
     color :gray ; 
-    font-size :14px ;
-    text-align :left ;
-    margin-left :1px ;
+    font-size :12px;
+    padding: 3px;
 }
 /* Tamaños Tipográficos */
 p {  
@@ -245,7 +244,12 @@ h1, h2 {
 .text-title{
   padding-left: 5%;
 }
-.recomendaciones{
+.text-detalles{
+  margin-bottom: 10px;
+  margin-top: 15px;
+ }
+  /*recomendados*/
+.recomendados{
   display: flex;
   padding-left: 5%;
   padding-right: 5%;
@@ -264,18 +268,41 @@ h1, h2 {
   margin-inline: 0.7%;
 }
 .articleRecomendado img{
-  width: 80%;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.text{
-  padding: 10px;
+  height: 130px;
+  width: 130px;
+  object-fit: cover;
 }
 .articleRecomendado:hover{
   transform: scale(1.1);
 }
+ /*section destacados*/
+.destacados{
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.articleDestacado{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  transition: all 1s ease;
+  border-style:solid;
+  border-width: 2px;
+  border-color: black;
+  margin-inline: 0.7%;
+
+}
+.articleDestacado img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  padding-top: 5px;
+}
+.articleDestacado:hover{
+  transform: scale(1.1);
+}
+
 /*footer*/
 .footer{
   button {
