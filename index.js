@@ -18,7 +18,9 @@ app.get('/register', (req,res)=>{
 app.get('/login', (req,res)=>{
   res.sendFile(__dirname + '/views/login.html');
 });
-
+app.get("/productcart", function (req, res) {
+  res.sendFile(path.join(__dirname, "/views/productcart.html"));
+});
 app.listen(3020, () => {
   console.log("Success");
 });
