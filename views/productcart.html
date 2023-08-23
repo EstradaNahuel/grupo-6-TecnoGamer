@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
+    <link rel="stylesheet" href="./css/productcart.css">
 </head>
 <body>
     <h1>Carrito de compras</h1>
     <table class="cart-table">
         <thead>
             <tr>
+                <th>Imagen</th>
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
-                <th>Total</th>
+                <th>Subtotal</th>
             </tr>
         </thead>
         <tbody class="cart-table__body">
             <!-- Aquí se mostrarán los productos agregados al carrito -->
         </tbody>
     </table>
+    <div class="cart-coupon">
+        <label for="coupon-code">Código de descuento:</label>
+        <input type="text" id="coupon-code" class="cart-coupon__code">
+        <button class="cart-coupon__apply">Aplicar</button>
+    </div>
     <div class="cart-total">
         Total: $<span class="cart-total__amount">0.00</span>
     </div>
     <button class="cart-checkout">Finalizar compra</button>
+
+    <!-- Agrega una etiqueta script para incluir el código JavaScript -->
+    <script src="/js/cart.js"></script>
 </body>
 </html>
