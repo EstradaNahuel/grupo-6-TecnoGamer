@@ -90,7 +90,7 @@ button{
   color: black;
   font-size:18px;
   margin-top: 5px;
-  background-color: rgb(73, 73, 73);
+  background-color: rgb(103, 101, 101);
   border: 2px solid #191919;
 
 }
@@ -224,7 +224,7 @@ p {
   padding :20px ;
 }
 
-h1, h2 {  
+h1, h2, h3 {  
   color :#333 ;
   font-size :24px ;
   text-align :center ;
@@ -304,15 +304,36 @@ h1, h2 {
 }
 
 /*footer*/
-.footer{
-  button {
-      display: inline-block;
-  }
-  button {
-    float: left;
-  }
-  .container button{
-    display: flex;
-    margin: 0 10px;
-  }
+.footer {
+  text-align: center;
+  background-color: #898989;
 }
+.footer button {
+  float: none;
+  display: inline-block;
+}
+.button-icons {
+  background-color: #898989;
+  border: none;
+  font-size: 30px;
+  padding: 10px 20px; 
+}
+.container {
+  background-color: #898989;
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px 40px 20px
+}
+.container-button {
+  background-color: #898989;
+  border: none;
+  font-size: 25px;
+  padding: 15px 15px; 
+}
+.button-item {
+  font-size: 13px;
+  padding: 7px 10px 5px 5px;
+  background-color: lightgray;
+  font-weight: bold;
+}
+
