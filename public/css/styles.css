@@ -83,7 +83,17 @@ nav .nav-2 li a{
 .w-50 {
   width: 100%;
 }
+button{
+  padding:7px;
+  border: radius 5px;
+  border:none;
+  color: black;
+  font-size:18px;
+  margin-top: 5px;
+  background-color: rgb(73, 73, 73);
+  border: 2px solid #191919;
 
+}
 .padding {
   padding: 24px;
 }
@@ -165,14 +175,6 @@ h1, h2 {
   padding: 0 20px;
   background-color:#1e1d1d;
 }
-button {
-  padding:10px;
-  border-radius:5px;
-  border:none;
-  background-color: grey;
-  color: black;
-  font-size:18px;
-}
 .text-center {
   text-align: center; 
   position:relative;
@@ -236,4 +238,19 @@ h1, h2 {
   margin-left: 0; /* Change margin-left to 0 */
   margin-right: auto;
   border-radius: 5px;
+}
+/*footer*/
+.footer{
+button {
+    display: inline-block;
+}
+button {
+  float: left;
+}
+.container button{
+  display: flex;
+  margin: 0 10px;
+}
+
+
 }
