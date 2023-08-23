@@ -89,9 +89,10 @@ nav .nav-2 li a{
 }
 
 main {
-  width: 90%;
+  width: 100%;
   text-align: center;
   margin: 1px;
+  background-color: #898989;
 }
 #ml-main-nav a {
   text-decoration: none;
@@ -116,8 +117,8 @@ body {
 
 .text-title {
   font-size: 24px;
-  margin-top: 24px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .text-price {
@@ -236,4 +237,41 @@ h1, h2 {
   margin-left: 0; /* Change margin-left to 0 */
   margin-right: auto;
   border-radius: 5px;
+}
+
+
+/*Main*/
+.text-title{
+  padding-left: 5%;
+}
+.recomendaciones{
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+
+}
+.articleRecomendado{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  transition: all 1s ease;
+  border-style:solid;
+  border-width: 2px;
+  border-color: black;
+  margin-inline: 0.7%;
+}
+.articleRecomendado img{
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.text{
+  padding: 10px;
+}
+.articleRecomendado:hover{
+  transform: scale(1.1);
 }
