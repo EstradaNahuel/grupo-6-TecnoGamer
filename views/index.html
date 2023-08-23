@@ -9,36 +9,34 @@
     <link rel="stylesheet" href="/css/styles.css" />
  </head>
  <body>
-    <header class="ml-black-bg padding">
-      <img id="logo" class="w-50" src= "/imagenes/logo.jpg" alt="bienvenidos!" />
-      <div>
-       <input type="text" placeholder="Buscador"/>
-       <button><i class="fa fa-search"></i></button>
-      </div>
-         <a href="register" title="Haga clic aquí para registrarse">Registrarse</a>
-         <a href="login" title="Haga clic aquí para iniciar sesión">Iniciar sesión</a>
-         <a href="productcart" title="Haga clic aquí para ver su carrito de compras">Carrito de compras</a>
-      <nav id="ml-main-nav">
-         <ul id="menu1">
-           <li class="item">
-             <a href="#">Productos</a>
-           </li>
-           <li class="item">
-             <a href="#">Arma tu Pc</a>
-           </li>
-           <li class="item">
-             <a href="#">Hadware</a>
-           </li>
-           <li class="item">
-             <a href="#">PC Armada</a>
-           </li>
-           <li class="item">
-            <a href="#">Ofertas</a>
-           </li>
-         </ul>
-       <div class="burger-menu">
-         <i class="fas fa-bars"></i>
+    <header>
+         <nav class="top-header">
+            <ul class="nav-1">
+               <li>
+                  <a href="register" title="Haga clic aquí para registrarse">Registrarse</a>
+                  <a href="login" title="Haga clic aquí para iniciar sesión">Iniciar sesión</a>
+                  <a href="productcart" title="Haga clic aquí para ver su carrito de compras">Carrito de compras</a>
+               </li>
+            </ul>
+         </nav>
+      <div class="media-header">
+         <div class="logo">
+            <img id="logo" class="w-50" src= "/imagenes/logo.jpg" alt="bienvenidos!" />
          </div>
+         <div class="form" action="#" method="GET">
+            <input type="text" placeholder="Buscar productos, marcas y más">
+            <div class="submit"><i class="fa fa-search"></i></div>
+            <i class="fa-regular fa-circle-user fa-beat"></i>
+        </div>
+      </div>   
+        <nav>
+         <ul class="nav-2">
+           <li><a href="#">Productos</a></li>
+           <li class="item"><a href="#">Arma tu Pc</a></li>
+           <li class="item"><a href="#">Hadware</a></li>
+           <li class="item"><a href="#">PC Armada</a></li>
+           <li class="item"><a href="#">Ofertas</a></li>
+         </ul>
      </nav>
     </header>
     <main>
