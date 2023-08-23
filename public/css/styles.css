@@ -276,3 +276,16 @@ h1, h2 {
 .articleRecomendado:hover{
   transform: scale(1.1);
 }
+/*footer*/
+.footer{
+  button {
+      display: inline-block;
+  }
+  button {
+    float: left;
+  }
+  .container button{
+    display: flex;
+    margin: 0 10px;
+  }
+}
