@@ -1,20 +1,85 @@
-html,
-body {
-  margin: 10px;
-  font-size: 12px;
-  padding: 24px;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+* {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 header {
-  padding: 1.5rem;
   font-size: 14px;
   background-color: #1e1d1d;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1% 6% 1%;
+}
+header ul li {
+  list-style-type: none;
 }
 .text-center {
   text-align: center;
 }
-
+header nav {
+  font-size: 15px;
+  gap: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
+nav .nav-1 {
+  width: 35%;
+  justify-content: space-between;
+}
+nav .nav-1 a{
+  padding: 1.5% 7%;
+  background-color: #000;
+}
+header ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+.media-header{
+  display: flex;
+  gap: 44%;
+  justify-content:center;
+}
+.media-header .logo img {
+  width: 200px;
+  height: 150px;
+}
+.media-header .form {
+  display: flex;
+  width: 40%;
+  height: 25%;
+  position: relative;
+}
+.media-header .form input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 2%;
+  outline: none;
+  border: 0;
+}
+.media-header .form .submit {
+  outline: none;
+  border: 0;
+  height: 40px;
+  font-size: 20px;
+  padding: 8px 0 8px 20px;
+  position: absolute;
+  left: 90%;
+  cursor: pointer;
+}
+nav .nav-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-2 li{
+  padding: 1.5% 7%;
+  background-color: #ff3b3f;
+}
+nav .nav-2 li a{
+  font-size: 100%;
+}
 .w-50 {
   width: 100%;
 }
@@ -28,12 +93,6 @@ main {
   text-align: center;
   margin: 1px;
 }
-
-#ml-main-nav ul {
-  list-style-type: none;
-  padding-left: 1px;
-}
-
 #ml-main-nav a {
   text-decoration: none;
   color: rgb(252, 6, 6);
@@ -52,6 +111,7 @@ main {
 body {
   font-family: "Roboto";
   font-size: 12px;
+  background-color: #ebebeb;
 }
 
 .text-title {
