@@ -1,14 +1,15 @@
 const express = require("express");
 const path = require("path");
-const fs = require("fs");
+const mainRoutes = require("./routes/main.js");
 
 const app = express();
 
-app.set("view engine", "ejes")
+app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.resolve(__dirname, "./public")));
 
-//rutas
+app.use("/",mainRoutes);
+/*rutas
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/views/index.html"));
 });
@@ -22,7 +23,7 @@ app.get('/login', (req,res)=>{
 });
 app.get("/productcart", function (req, res) {
   res.sendFile(path.join(__dirname, "/views/productcart.html"));
-});
+});*/
 app.listen(3020, () => {
   console.log("Success");
 });
