@@ -102,7 +102,7 @@ main {
   width: 100%;
   text-align: center;
   margin: 1px;
-  background-color: #898989;
+  background-color: #191919;
 }
 #ml-main-nav a {
   text-decoration: none;
@@ -245,10 +245,11 @@ h1, h2, h3 {
   padding-left: 5%;
 }
 .text-detalles{
-  margin-bottom: 10px;
-  margin-top: 15px;
+  background: linear-gradient(white,#ff3b3f);
+  padding-top: 8px ;
+  height:105px
  }
-  /*sectionrecomendados*/
+  /*main sectionrecomendados*/
 .recomendados{
   display: flex;
   padding-left: 15%;
@@ -275,7 +276,7 @@ h1, h2, h3 {
 .articleRecomendado:hover{
   transform: scale(1.1);
 }
- /*section destacados*/
+ /*main section destacados*/
 .destacados{
   display: flex;
   padding-left: 15%;
@@ -301,6 +302,11 @@ h1, h2, h3 {
 }
 .articleDestacado:hover{
   transform: scale(1.1);
+}
+/*main section marcas*/
+
+.marcas{
+  display: flex;
 }
 
 /*footer*/
