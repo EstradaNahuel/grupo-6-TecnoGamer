@@ -84,13 +84,13 @@ nav .nav-2 li a{
   width: 100%;
 }
 button{
-  padding:7px;
+  /*padding:7px;*/
   border: radius 5px;
   border:none;
   color: black;
   font-size:18px;
   margin-top: 5px;
-  background-color: rgb(103, 101, 101);
+  /*background-color: rgb(103, 101, 101);*/
   border: 2px solid #191919;
 
 }
@@ -241,15 +241,16 @@ h1, h2, h3 {
 }
 
 /*Main*/
-.text-title{
+main .text-title {
   padding-left: 5%;
+  background-color: #ff3b3f;
 }
 .text-detalles{
   background: linear-gradient(white,#ff3b3f);
   padding-top: 8px ;
-  height:105px
+  height:106px
  }
-  /*main sectionrecomendados*/
+  /*main section recomendados*/
 .recomendados{
   display: flex;
   padding-left: 15%;
@@ -264,7 +265,7 @@ h1, h2, h3 {
   background-color: white;
   transition: all 1s ease;
   border-style:solid;
-  border-width: 2px;
+  border-width: 5px;
   border-color: black;
   margin-inline: 0.7%;
 }
@@ -275,6 +276,7 @@ h1, h2, h3 {
 }
 .articleRecomendado:hover{
   transform: scale(1.1);
+  border-color: #ff3b3f;
 }
  /*main section destacados*/
 .destacados{
@@ -289,24 +291,31 @@ h1, h2, h3 {
   background-color: white;
   transition: all 1s ease;
   border-style:solid;
-  border-width: 2px;
+  border-width: 5px;
   border-color: black;
-  margin-inline: 0.7%;
-
+  margin-inline: 0.7%
 }
 .articleDestacado img{
   height: 150px;
   width: 150px;
-  object-fit: cover;
-  padding-top: 5px;
+  object-fit: cover 
 }
 .articleDestacado:hover{
   transform: scale(1.1);
+  border-color:#ff3b3f;
 }
 /*main section marcas*/
 
 .marcas{
   display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 0.5%;
+}
+.marcas img{
+  height: 50px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*footer*/
