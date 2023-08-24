@@ -1,35 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TECNO GAMER</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css" />
- </head>
+   <%- include('../partials/head') %>
  <body>
-    <header>
-         <nav class="top-header">
-            <ul class="nav-1">
-               <li>
-                  <a href="register" title="Haga clic aquí para registrarse">Registrarse</a>
-                  <a href="login" title="Haga clic aquí para iniciar sesión">Iniciar sesión</a>
-                  <a href="productcart" title="Haga clic aquí para ver su carrito de compras">Carrito de compras</a>
-               </li>
-            </ul>
-         </nav>
-      <div class="media-header">
-         <div class="logo">
-            <img id="logo" class="w-50" src= "/imagenes/logo-1.jpg" alt="bienvenidos!" />
-         </div>
-         <div class="form" action="#" method="GET">
-            <input type="text" placeholder="Buscar productos, marcas y más">
-            <div class="submit"><i class="fa fa-search"></i></div>
-            <i class="fa-regular fa-circle-user fa-beat"></i>
-        </div>
-      </div>   
-    </header>
+      
+   <%- include('../partials/header') %>
     <section class="sectionheader">
       <img class="banner1" src="/imagenes/banner1.jpg" alt="no te pierdas de estas ofertas" />
       <nav>
@@ -161,36 +135,6 @@
             </div>   
       </section>
     </main>
-    <footer class="footer">
-      <section class="container-button">
-         <div>
-            <button class="button-item">¿QUIENES SOMOS?</button>
-            <button class="button-item">BOTON DE ARREPENTIMIENTO</button>
-            <button class="button-item">POLITITICA DE PRIVACIDAD</button>
-            <button class="button-item">VENTAS CORPORATIVAS</button>
-            <button class="button-item">TERMINOS Y CONDICIONES</button>
-            <button class="button-item">GARANTIAS Y DEVOLUCIONES</button>
-            <button class="button-item">ATENCION AL CLIENTE</button>
-        </div>
-       </section>
-       <section>
-         <h2 class="text-title">TIENES ALGUNA DUDA? </h2>
-         <h3 class="text-title">CONTACTANOS </h3>
-      </section> 
-       <section class="container">
-         <div class="item">
-            <imput type="submit" value=""/>
-            <button class="button-icons"><i class="fa-brands fa-whatsapp"></i></button>
-            <imput type="text" value=""/>
-            <button class="button-icons"><i class="fa-brands fa-instagram"></i></button>
-            <imput type="text" value=""/>
-            <button class="button-icons"><i class="fa-brands fa-facebook"></i></button>
-            <imput type="text" value=""/>
-            <button class="button-icons"><i class="fa-regular fa-envelope"></i></button>
-            <imput type="text" value=""/>
-            <button class="button-icons"><i class="fa-brands fa-x-twitter"></i></button>
-         </div>
-       </section>
-    </footer>
+    <%- include('../partials/footer') %>
  </body>
 </html>
