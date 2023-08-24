@@ -4,7 +4,10 @@ const fs = require("fs");
 
 const app = express();
 
-app.set("view engine", "ejes")
+
+app.use(express.static('public'));
+
+app.set("view engine", "ejs")
 
 app.use(express.static(path.join(__dirname, "public")));
 
