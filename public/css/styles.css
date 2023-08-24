@@ -11,7 +11,7 @@ header {
     gap: 20px;
     padding: 1% 6% 1%;
 }
-header ul li {
+header ul li, ul li {
   list-style-type: none;
 }
 .text-center {
@@ -24,6 +24,11 @@ header nav {
   display: flex;
   flex-direction: row-reverse;
 }
+nav .nav-2 a{
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+}
 nav .nav-1 {
   width: 35%;
   justify-content: space-between;
@@ -35,6 +40,10 @@ nav .nav-1 a{
 header ul li a{
   text-decoration: none;
   color: #fff;
+}
+section .sectionheader{
+  display: flex;
+  background-color: rgb(103, 101, 101);
 }
 .media-header{
   display: flex;
@@ -72,13 +81,12 @@ nav .nav-2 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  font-size: 15px;
 }
 nav .nav-2 li{
   padding: 1.5% 7%;
   background-color: #ff3b3f;
-}
-nav .nav-2 li a{
-  font-size: 100%;
 }
 .w-50 {
   width: 100%;
@@ -154,7 +162,7 @@ body {
     height: 100%;
 }
 .banner2 {
-  width: 111%;
+  width: 100%;
   height: 100%;
 }
 p {
