@@ -4,7 +4,7 @@
 
 <h2>Formulario de Edición de Producto</h2>
 
-<form action="/edit_product">
+<form action="/products/<%= product.id %>/edit?_method=PUT" method="POST">
   <label for="pid">ID del Producto:</label><br>
   <input type="text" id="pid" name="pid"><br>
   <label for="pname">Nombre del Producto:</label><br>

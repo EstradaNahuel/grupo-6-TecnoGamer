@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
 <body>
-<table>
-    <tr>
-      <th>Nombre del producto</th>
-      <th>Descripción</th>
-      <th>Precio</th>
-    </tr>
-    <tr>
-      <td>Producto 1</td>
-      <td>Descripción del producto 1</td>
-      <td>$10.99</td>
-    </tr>
-    <tr>
-      <td>Producto 2</td>
-      <td>Descripción del producto 2</td>
-      <td>$12.99</td>
-    </tr>
-    <tr>
-      <td>Producto 3</td>
-      <td>Descripción del producto 3</td>
-      <td>$9.99</td>
-    </tr>
-</table>
+ 
+ <%- include("../partials/header") %>
+
+ <div class="ps-content">
+
+   <h1>listado de productos:</h1>
+
+   <section class="menu-wrap">
+     <% products.forEach(function(product) { %>
+       <a href="/product/detail/<%= product.id %>">
+         <article>
+           <div class="img-container">
+             <img src="/imagenes/destacado1.jpg" alt="plato">
+           </div>
+           <p>informacion del producto:</p>
+           <ul>
+             <li>
+                 Nombre: <%= product.name %>
+             </li>
+             <li>
+                 Descripcion: <%= product.description %>
+             </li>
+             <li>
+                 Precio:  <%= product.price %>
+             </li>
+           </ul>
+         </article>
+       </a>
+     <% }) %>
+         
+   </section>
+ </div>
+
+ <%- include("../partials/footer") %> 
 </body>
 </html>

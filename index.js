@@ -5,11 +5,13 @@ const methodOverride = require("method-override");
 
 const app = express();
 const productRouter = require("./routes/productRouter");
-const userViews = path.join(__dirname, "/views/users");
-const productViews = path.join(__dirname, "/views/products");
-
+/*
+const userViews = path.join(__dirname, "./views/users");
+const productViews = path.join(__dirname, "./views/products");
+*/
+app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs")
-app.set("views", [userViews, productViews]);
+//app.set("views", [userViews, productViews]);
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));

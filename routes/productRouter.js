@@ -11,14 +11,14 @@ const configMulter = multer.diskStorage({
         cb(null, file.fieldname + Date.now() + path.extname(file.originalname))
     }
 });
-const upload = multer({storage:configMulter});
+const upload = multer({storage: configMulter});
 
 router.get("/list", productControllers.listProduct);
 router.get("/:id", productControllers.productdetail);
 router.get("/create/", productControllers.create);
-router.get("/create/", upload.single("image"), productControllers.store);
+router.post("/create/", upload.single("image"), productControllers.store);
 router.get("/update/:id/edit", productControllers.edit);
 router.put("/update/:id", productControllers.update);
-router.delate("/:id", productControllers.destroy);
+router.delete("/delete/:id", productControllers.destroy);
 
 module.exports = router;
