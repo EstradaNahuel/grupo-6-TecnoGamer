@@ -1,10 +1,10 @@
 const express = require("express");
 const path = require("path");
-const mainRoutes = require("./routes/main.js");
+const mainRoutes = require("./routes/main");
 const methodOverride = require("method-override");
 
 const app = express();
-const productRouter = require("./routes/productRouter.js");
+const productRouter = require("./routes/productRouter");
 const userViews = path.join(__dirname, "/views/users");
 const productViews = path.join(__dirname, "/views/products");
 

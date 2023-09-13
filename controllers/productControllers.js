@@ -1,26 +1,27 @@
-const fs = require("fs");
+const fs = require('fs');
 const path = require('path');
 const dataJson = fs.readFileSync(path.join(__dirname, "../data/productos.json"));
-const products = JSON.parce(dataJson);
+const products = JSON.parse(dataJson);
 
-function addProduct(products){
-    products.push(products);
+function addProduct(newProduct){
+    products.push(newProduct);
     const productString = JSON.stringify(products);
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), productString);
 };
+
 function updateProducts(){
-    const productString = JSON.stringify(products);
+    const productString = JSON.stringify(products, null, 4);
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), productString);
 };
 
 const productControllers = {
     listProduct: (req, res)=>{
-        res.render("list-products", {products: products})
+        res.render("list-products", {products : products})
     },
     productdetail: (req, res)=>{
         const idProduct = req.params.idProduct;
         const productFound = products.filter(product => product.id == idProduct);
-        res.render("productdetail", {products: productFoud[0]})
+        res.render("productdetail", {products: productFound[0]})
     },
     create: (req,res)=>{
         res.render("create-product")
@@ -40,8 +41,9 @@ const productControllers = {
     edit: (req, res)=> {
         const id = req.params.id
         const productFound = products.find(function(product){
-            return product.id == id
+            return product.id == id   
         })
+        res.render('edit-product', { product: productFound });
     },
     update: (req, res) => {
         const id = req.params.id
@@ -59,4 +61,4 @@ const productControllers = {
     }
 };
  
-module.exports= productControllers;
+module.exports = productControllers;

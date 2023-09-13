@@ -1,5 +1,6 @@
-const path = require("path");
-
+/*
+const path = require('path');
+*/
 const mainControllers = {
     home: (req,res)=>{
         res.render("./users/index", {
