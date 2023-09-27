@@ -19,7 +19,7 @@ const mainControllers = {
             "title": "ingreso",
             "css":"login"
         })
-    },
+    } /*,
     productcart: (req,res)=>{
         res.render("./products/productcart", {
             "title": "carrito compras",
@@ -32,6 +32,7 @@ const mainControllers = {
             "css":"productdetail"
         })
     }
+    */
 }
  
 
