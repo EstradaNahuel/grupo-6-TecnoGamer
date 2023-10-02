@@ -15,15 +15,15 @@ const configMulter = multer.diskStorage({
 });
 const upload = multer({storage: configMulter});
 
-router.get("/products/list", productController.list);
-router.get("/products/:id", productController.detail);
+router.get("/list", productController.list);
+router.get("/detail/:id", productController.detail);
 //router.get('/products/productcart', productController.productCart);
 
-router.get("/products/create/:id", productController.create);
-router.post("/products/create/:id", upload.single("image"), productController.store);
+router.get("/create/:id", productController.create);
+router.post("/create/:id", upload.single("image"), productController.store);
 
-router.get("/products/edit/:id", productController.edit);
-router.put("/products/edit/:id", productController.update);
+router.get("/edit/:id", productController.edit);
+router.put("/edit/:id", productController.update);
 
 router.delete("/delete/:id", productController.destroy);
 

@@ -17,7 +17,7 @@ app.use(methodOverride("_method"));
 
 //rutas
 app.use("/",mainRouter);
-app.use("/", productRouter);
+app.use("/products", productRouter);
 
 
 app.listen(3020, () => {

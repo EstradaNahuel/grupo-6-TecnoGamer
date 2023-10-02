@@ -17,8 +17,8 @@ function updateProducts(){
     fs.writeFileSync(path.join(__dirname, "../data/products.json"), productString);
 };
 
-function deleteProducts(productsNuevos){
-	const productsString = JSON.stringify(productsNuevos, null, 4)
+function deleteProducts(productsNew){
+	const productsString = JSON.stringify(productsNew, null, 4)
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 
@@ -31,16 +31,18 @@ const productControllers = {
         const productFound = products.filter( elem => elem.id == idProduct)
 
         res.render('./products/productdetail', { productFound: productFound[0]})
-detail: function(req,res){
+    */
+    detail: function(req,res){
     let id = req.params.id;
     let productFound = products.find(function(product){
         return product.id == id;
     })
-    res.render('./products/productdetail', {product: productFound})*/
+    res.render('./products/productdetail', {product: productFound})
+    /*
     detail: (req, res) => {
         let productFound = products.find((x) => x.id == req.params.id);
         res.render('./products/productdetail', { product: productFound });
-    
+    */
     },
     //productCart: (req, res) => {
      //   return res.render('./products/productcart');
@@ -89,8 +91,8 @@ detail: function(req,res){
     },
     destroy: (req, res) => {
         const idProduct = req.params.id;
-		const productsNuevos = products.filter( elem => elem.id != idProduct );
-		deleteProducts(productsNuevos);
+		const productsNew = products.filter( elem => elem.id != idProduct );
+		deleteProducts(productsNew);
 		res.redirect('/products/list');
         
       },
