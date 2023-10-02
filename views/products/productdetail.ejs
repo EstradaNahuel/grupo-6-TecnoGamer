@@ -4,14 +4,18 @@
     <title>Detalles del producto</title>
 </head>
 <body>
-    <a href="/products/list">Listado</a>
+    <a href="/products/detail"></a>
+    <h3>Detalle de Producto</h3>
     <div class="product-detail">
-        <img src="/imagenes" alt="Imagen del producto" class="product-detail__img">
+        <img src="/imagenes/<%= productFound.image %>" alt="Imagen del producto" class="product-detail__img">
         <div class="product-detail__info">
-            <p class="product-detail__title"><%= products.name %></p>
-            <p class="product-detail__description"><%= products.description %></p>
-            <span class="product-detail__price">$<%= products.price %></span>
+            <p class="product-detail__title"><%= productFound.name %></p>
+            <p class="product-detail__description"><%= productFound.description %></p>
+            <span class="product-detail__price">$<%= productFound.price %></span>
             <button class="product-detail__add-to-cart">Añadir al carrito</button>
+            <a href="/products/edit/<%= productFound.id %>" class="">
+              <button>Editar productos</button>
+            </a>
         </div>
     </div>
     

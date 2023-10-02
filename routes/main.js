@@ -8,10 +8,10 @@ router.get("/", mainControllers.home);
 router.get("/register", mainControllers.register);
 
 router.get("/login", mainControllers.login);
-
+/*
 router.get("/productcart", mainControllers.productcart);
 
-router.get("/productdetail", mainControllers.productdetail);
-
+router.get("/productdetail", mainControllers.detail);
+*/
 
 module.exports = router;

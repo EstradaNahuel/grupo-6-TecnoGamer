@@ -25,7 +25,7 @@ const mainControllers = {
             "title": "carrito compras",
             "css":"productcart"
         })
-    },
+    } /*,
     productdetail: (req,res)=>{
         res.render("./products/productdetail", {
             "title": "detalles del producto",
