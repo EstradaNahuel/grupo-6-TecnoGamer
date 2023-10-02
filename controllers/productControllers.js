@@ -3,7 +3,7 @@ const path = require('path');
 
 const dataJson = fs.readFileSync(path.join(__dirname, "../data/products.json"));
 
-const products = JSON.parse( fs.readFileSync(dataJson, 'utf-8'));
+const products = JSON.parse(dataJson, 'utf-8');
 
 
 function addProduct(Product){
@@ -24,20 +24,29 @@ function deleteProducts(productsNuevos){
 
 const productControllers = {
     list: (req, res)=>{
-        res.render('./products/list-product.ejs', { product: products})
-    },
+        res.render('./products/list-product.ejs', { products: products})
+    }, /*
     detail: (req, res) => {
         const idProduct = req.params.id
         const productFound = products.filter( elem => elem.id == idProduct)
 
-        res.render('/products/productdetail', { productFound: productFound[0]})
-
+        res.render('./products/productdetail', { productFound: productFound[0]})
+detail: function(req,res){
+    let id = req.params.id;
+    let productFound = products.find(function(product){
+        return product.id == id;
+    })
+    res.render('./products/productdetail', {product: productFound})*/
+    detail: (req, res) => {
+        let productFound = products.find((x) => x.id == req.params.id);
+        res.render('./products/productdetail', { product: productFound });
+    
     },
-    productCart: (req, res) => {
-        return res.render('productCart');
-    },
+    //productCart: (req, res) => {
+     //   return res.render('./products/productcart');
+    //},
     create: (req, res)=>{
-        res.render('create-product');
+        res.render('./products/create-product');
     },
     store: (req, res)=>{
         const form = req.body;
@@ -59,7 +68,7 @@ const productControllers = {
         const productFound = products.find(function(elem){
             return elem.id == idProduct   
         })
-        res.render('edit-product', { productFound: productFound });
+        res.render('./products/edit-product', { productFound: productFound });
     },
     update: (req, res) => {
         const id = req.params.id

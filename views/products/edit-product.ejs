@@ -2,6 +2,7 @@
 <html>
   <head>
     <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/edit.css" />
   </head>
 <body>
   <%- include('../partials/header')%>
@@ -14,6 +15,8 @@
   <input type="text" id="pname" name="name" value="<%= productFound.name  %>">
   <label for="pdesc">Descripción del Producto:</label>
   <input type="text" id="pdesc" name="description"><%= productFound.description  %>
+  <label for="image">Imagen:</label>
+  <input type="file" name="image" value="<%=  productFound.image %>">
   <label for="pprice">Precio del Producto:</label>
   <input type="text" id="pprice" name="price" value="<%=  productFound.price %>">
   <input type="submit" value="Actualizar">

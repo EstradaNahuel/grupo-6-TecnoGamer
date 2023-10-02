@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/list.css" />
+  </head>
+
 <body>
  
  <%- include("../partials/header") %>
@@ -9,22 +14,22 @@
    <h1>listado de productos:</h1>
 
    <section class="menu-wrap">
-     <% products.forEach(function(product) { %>
-       <a href="/product/detail/<%= product.id %>">
+     <% products.forEach(function(products) { %>
+       <a href="/product/list/<%= products.id %>">
          <article>
            <div class="img-container">
-             <img src="/imagenes//<%= product.image %>" alt="plato">
+             <img src="/imagenes/<%= products.image %>" alt="">
            </div>
            <p>informacion del producto:</p>
            <ul>
              <li>
-                 Nombre: <%= product.name %>
+                 Nombre: <%= products.name %>
              </li>
              <li>
-                 Descripcion: <%= product.discont %>
+                 Descripcion: <%= products.description %>
              </li>
              <li>
-                 Precio:  <%= product.price %>
+                 Precio:  <%= products.price %>
              </li>
            </ul>
          </article>
