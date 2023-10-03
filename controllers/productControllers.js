@@ -17,27 +17,38 @@ function updateProducts(){
     fs.writeFileSync(path.join(__dirname, "../data/products.json"), productString);
 };
 
-function deleteProducts(productsNuevos){
-	const productsString = JSON.stringify(productsNuevos, null, 4)
+function deleteProducts(productsNew){
+	const productsString = JSON.stringify(productsNew, null, 4)
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 
 const productControllers = {
     list: (req, res)=>{
-        res.render('./products/list-product', { product: products})
-    },
+        res.render('./products/list-product.ejs', { products: products})
+    }, /*
     detail: (req, res) => {
         const idProduct = req.params.id
         const productFound = products.filter( elem => elem.id == idProduct)
 
         res.render('./products/productdetail', { productFound: productFound[0]})
-
+    */
+    detail: function(req,res){
+    let id = req.params.id;
+    let productFound = products.find(function(product){
+        return product.id == id;
+    })
+    res.render('./products/productdetail', {product: productFound})
+    /*
+    detail: (req, res) => {
+        let productFound = products.find((x) => x.id == req.params.id);
+        res.render('./products/productdetail', { product: productFound });
+    */
     },
-    productCart: (req, res) => {
-        return res.render('productCart');
-    },
+    //productCart: (req, res) => {
+     //   return res.render('./products/productcart');
+    //},
     create: (req, res)=>{
-        res.render('create-product');
+        res.render('./products/create-product');
     },
     store: (req, res)=>{
         const form = req.body;
@@ -59,7 +70,7 @@ const productControllers = {
         const productFound = products.find(function(elem){
             return elem.id == idProduct   
         })
-        res.render('edit-product', { productFound: productFound });
+        res.render('./products/edit-product', { productFound: productFound });
     },
     update: (req, res) => {
         const id = req.params.id
@@ -80,8 +91,8 @@ const productControllers = {
     },
     destroy: (req, res) => {
         const idProduct = req.params.id;
-		const productsNuevos = products.filter( elem => elem.id != idProduct );
-		deleteProducts(productsNuevos);
+		const productsNew = products.filter( elem => elem.id != idProduct );
+		deleteProducts(productsNew);
 		res.redirect('/products/list');
         
       },

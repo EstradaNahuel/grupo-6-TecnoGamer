@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/create.css" />
+  </head>
+ 
 <body>
-
+ <header>
+    <%- include('../partials/header') %>
+  </header>
 <h2>Formulario de Creación/Subida de Producto</h2>
 
 <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
   <label for="pname">Nombre del Producto:</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" required>
   <label for="desc">Descripción del Producto:</label>
-  <input type="text" id="description" name="description">
+  <input type="text" id="description" name="description" required>
   <label for="price">Precio del Producto:</label>
-  <input type="text" id="pprice" name="price">
-  <label for="image">Imaen del Producto:</label>
-  <input type="file" id="image" name="image">
+  <input type="text" id="price" name="price" required>
+  <label for="image">Imagen del Producto:</label>
+  <input type="file" id="image" name="image" required>
   <input type="submit" value="Subir">
 </form> 
-
+<footer>
+  <%- include('../partials/footer') %>
+</footer>
 </body>
 </html>
