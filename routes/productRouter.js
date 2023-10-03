@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer'); 
 const path = require('path')
 const productController = require("../controllers/productControllers");
+const app = express();
 
 const configMulter = multer.diskStorage({
     destination: function(req, file, cb){
@@ -26,5 +27,11 @@ router.get("/edit/:id", productController.edit);
 router.put("/edit/:id", productController.update);
 
 router.delete("/delete/:id", productController.destroy);
+
+app.post("/products", upload.array("image"), function(req,res, next){
+    console.log(req.files)
+    res.send("entroooo :)")
+  });
+  
 
 module.exports = router;
