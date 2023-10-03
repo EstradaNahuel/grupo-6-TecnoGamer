@@ -50,13 +50,13 @@ router.get('/login', function(req, res){
         res.send('No existe el usuario en sesión!');
     }
 })
-/*
+
 router.get('/logout', function(req, res){
     req.session.destroy();
     res.clearCookie('age');
     res.send('cerraste sesión!');
 })
-*/
+
 router.get('/register', userControllers.register)
 router.post('/register', upload.single('imagen'), userControllers.registered)
 
