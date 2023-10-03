@@ -3,7 +3,7 @@ const path = require('path');
 
 const dataJson = fs.readFileSync(path.join(__dirname, "../data/products.json"));
 
-const products = JSON.parse( fs.readFileSync(dataJson, 'utf-8'));
+const products = JSON.parse(dataJson, 'utf-8');
 
 
 function addProduct(Product){
@@ -24,13 +24,13 @@ function deleteProducts(productsNuevos){
 
 const productControllers = {
     list: (req, res)=>{
-        res.render('./products/list-product.ejs', { product: products})
+        res.render('./products/list-product', { product: products})
     },
     detail: (req, res) => {
         const idProduct = req.params.id
         const productFound = products.filter( elem => elem.id == idProduct)
 
-        res.render('/products/productdetail', { productFound: productFound[0]})
+        res.render('./products/productdetail', { productFound: productFound[0]})
 
     },
     productCart: (req, res) => {

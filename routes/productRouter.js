@@ -10,7 +10,7 @@ const configMulter = multer.diskStorage({
         cb(null, path.join(__dirname, '../../public/imagenes'))
     },
     filename: function(req, file, cb){
-        cb(null, file.fieldname + Date.now() + path.extname(file.originalname))
+        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`)
     }
 });
 const upload = multer({storage: configMulter});
