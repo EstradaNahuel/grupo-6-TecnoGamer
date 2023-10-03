@@ -6,8 +6,9 @@ const dataJson = fs.readFileSync(path.join(__dirname, "../data/products.json"));
 const products = JSON.parse(dataJson, 'utf-8');
 
 
-function addProduct(Product){
-    products.push(Product);
+function addProduct(product){
+    products.push(product);
+    res.send("entro metodo addProduct");
     const productString = JSON.stringify(products, null, 4);
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productString);
 };
@@ -48,6 +49,7 @@ const productControllers = {
      //   return res.render('./products/productcart');
     //},
     create: (req, res)=>{
+        res.send("entro a create")
         res.render('./products/create-product');
     },
     store: (req, res)=>{
