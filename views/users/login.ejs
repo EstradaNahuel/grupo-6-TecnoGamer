@@ -6,10 +6,15 @@
     <title>Login</title>
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="./css/login.css">
+    <%- include('../partials/head') %>
 </head>
 <body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
 <section class="loginform cf">
-    <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+    <form name="login" action="/users/login" method="post" accept-charset="utf-8">
+        <h2 class="text-title">iniciar sesion</h2>
         <ul>
             <li>
                 <label for="usermail">Correo electrónico</label>
@@ -20,10 +25,16 @@
                 <input type="password" name="password" placeholder="contraseña" required>
             </li>
             <li>
+                <a href="/register" id="">Registrate</a>
+            </li>
+            <li>
                 <input type="submit" value="Login">
             </li>
         </ul>
     </form>
 </section>
+  <footer>
+        <%- include('../partials/footer') %>
+    </footer>
 </body>
 </html>

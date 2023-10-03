@@ -53,10 +53,10 @@ const productControllers = {
     store: (req, res)=>{
         const form = req.body;
         const nameFile = req.file.filename;
-		const pos = products.length-1;
+		//const pos = h-1;
 
         const newProduct = {
-            id: products[pos].id + 1 ,
+            id: products.length+ 1 ,
             name: form.name,
             description: form.description,
             price: form.price,
