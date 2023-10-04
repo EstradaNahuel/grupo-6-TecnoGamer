@@ -22,10 +22,10 @@ const userControllers=  {
             }
            //res.cookie('name', req.body.age, { maxAge: 60000 * 24 });
            req.session.user = user
-           res.render('home', { user: user, email: req.body.email  });
+           res.render('/home', { user: user, email: req.body.email  });
 
         }else {
-            res.render('home', { errors: resultError.array() })
+            res.render('/home', { errors: resultError.array() })
         }
         
     },

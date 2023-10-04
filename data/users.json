@@ -1,12 +1,12 @@
 [
     {
-        "id": "",
-        "name": "", 
-        "firstname": "",
-        "surname": "",
-        "email": "",
-        "password": "",
-        "category": "",
-        "imagen": ""
+        "id": "1",
+        "name": "nahel", 
+        "firstname": "nahel",
+        "surname": "est",
+        "email": "nahelest@gmail.com",
+        "password": "1234567890",
+        "category": "admin",
+        "imagen": "/imagenes/users/ADM.jpg"
     }
 ]

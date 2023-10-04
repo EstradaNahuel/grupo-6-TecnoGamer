@@ -8,7 +8,6 @@ const products = JSON.parse(dataJson, 'utf-8');
 
 function addProduct(product){
     products.push(product);
-    res.send("entro metodo addProduct");
     const productString = JSON.stringify(products, null, 4);
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productString);
 };
@@ -26,30 +25,18 @@ function deleteProducts(productsNew){
 const productControllers = {
     list: (req, res)=>{
         res.render('./products/list-product.ejs', { products: products})
-    }, /*
-    detail: (req, res) => {
-        const idProduct = req.params.id
-        const productFound = products.filter( elem => elem.id == idProduct)
-
-        res.render('./products/productdetail', { productFound: productFound[0]})
-    */
+    }, 
     detail: function(req,res){
     let id = req.params.id;
     let productFound = products.find(function(product){
         return product.id == id;
     })
     res.render('./products/productdetail', {product: productFound})
-    /*
-    detail: (req, res) => {
-        let productFound = products.find((x) => x.id == req.params.id);
-        res.render('./products/productdetail', { product: productFound });
-    */
     },
     //productCart: (req, res) => {
      //   return res.render('./products/productcart');
     //},
     create: (req, res)=>{
-        res.send("entro a create")
         res.render('./products/create-product');
     },
     store: (req, res)=>{

@@ -1,73 +1,81 @@
-[{
-    "id": "1",
-    "name": "PC GAMER BASIC",
-    "description": "Procesador dual core, memoria RAM 8gb. Grafica NVIDIA 630, ETC",
-    "price": "150000",
-    "images": "/imagenes/recomendacion1.jpg",
-    "category": "PC Armada",
-    "colors": "black"
-  },
-  {
-    "id": "2", 
-    "name": "PC GAMER MEDIA", 
-    "description": "Procesador Intel Core i5, memoria RAM 16gb. Grafica NVIDIA 1080, ETC",
-    "price": "330000",
-    "images": "/imagenes/recomendacion2.jpg",
-    "category": "PC Armada",
-    "colors": "white"
-  },
-  {
-    "id": "3", 
-    "name": "PACK: Teclado + Mause + Almohadilla",
-    "description": "Teclado mecánico. Mause metálico. Almohadilla 10x30cm",
-    "price": "20000",
-    "images": "/imagenes/recomendacion3.jpg",
-    "category":"Hardware",
-    "colors": "black"
-  },
-  {
-    "id": "4",
-    "name": "PACK TECLADO + ALMOHADOLLA + MAUSE + AUDICULARES", 
-    "description": "Teclado mecánico. Mause ERGB. Audiculares inalambricos",
-    "price": "27000",
-    "images": "/imagenes/recomendacion4.jpg",
-    "category": "Hardware",
-    "colors": "red-black"
-  },
-  {
-    "id": "5",
-    "name":  "PC GAMER ALTA CON RGB",
-    "description": "Procesador Intel Core i7. Memoria RAM 32gb. Grafica NVIDIA 3060, ETS",
-    "price": "370000",
-    "images": "/imagenes/destacado1.jpg",
-    "category": "PC Armada",
-    "colors": "black"
-  },
-  {
-    "id": "6",
-    "name":  "JOYSTICK INALAMBRICO PC",
-    "description": "Mause inalambrico, con luces RGB",
-    "price": "25000",
-    "images": "/imagenes/destacado2.jpg",
-    "category": "Oferta",
-    "colors": "white-black"
-  },
-  {
-    "id": "7",
-    "name":  "CARGADOR DE JOYSTICK INALAMBRICO PC",
-    "description": "Cargador, entrada USB, 50voltios, carga rapida",
-    "price": "14700",
-    "images": "/imagenes/destacado3.jpg",
-    "category": "Oferta",
-    "colors": "white-black"
-  },
-  {
-    "id": "8",
-    "name":  "PC GAMER BASIC",
-    "description": "Procesador Intel Core i3. Memoria RAM 8gb. Grafica NVIDIA 1080, ETS",
-    "price": "165999",
-    "images": "/imagenes/destacado4.jpg",
-    "category": "PC Armada",
-    "colors": "gray-black"
-  }
+[
+    {
+        "id": "1",
+        "name": "PC GAMER BASIC",
+        "description": "Procesador dual core, memoria RAM 8gb. Grafica NVIDIA 630, ETC",
+        "price": "150000",
+        "images": "/imagenes/recomendacion1.jpg",
+        "category": "PC Armada",
+        "colors": "black"
+    },
+    {
+        "id": "2",
+        "name": "PC GAMER MEDIA",
+        "description": "Procesador Intel Core i5, memoria RAM 16gb. Grafica NVIDIA 1080, ETC",
+        "price": "330000",
+        "images": "/imagenes/recomendacion2.jpg",
+        "category": "PC Armada",
+        "colors": "white"
+    },
+    {
+        "id": "3",
+        "name": "PACK: Teclado + Mause + Almohadilla",
+        "description": "Teclado mecánico. Mause metálico. Almohadilla 10x30cm",
+        "price": "20000",
+        "images": "/imagenes/recomendacion3.jpg",
+        "category": "Hardware",
+        "colors": "black"
+    },
+    {
+        "id": "4",
+        "name": "PACK TECLADO + ALMOHADOLLA + MAUSE + AUDICULARES",
+        "description": "Teclado mecánico. Mause ERGB. Audiculares inalambricos",
+        "price": "27000",
+        "images": "/imagenes/recomendacion4.jpg",
+        "category": "Hardware",
+        "colors": "red-black"
+    },
+    {
+        "id": "5",
+        "name": "PC GAMER ALTA CON RGB",
+        "description": "Procesador Intel Core i7. Memoria RAM 32gb. Grafica NVIDIA 3060, ETS",
+        "price": "370000",
+        "images": "/imagenes/destacado1.jpg",
+        "category": "PC Armada",
+        "colors": "black"
+    },
+    {
+        "id": "6",
+        "name": "JOYSTICK INALAMBRICO PC",
+        "description": "Mause inalambrico, con luces RGB",
+        "price": "25000",
+        "images": "/imagenes/destacado2.jpg",
+        "category": "Oferta",
+        "colors": "white-black"
+    },
+    {
+        "id": "7",
+        "name": "CARGADOR DE JOYSTICK INALAMBRICO PC",
+        "description": "Cargador, entrada USB, 50voltios, carga rapida",
+        "price": "14700",
+        "images": "/imagenes/destacado3.jpg",
+        "category": "Oferta",
+        "colors": "white-black"
+    },
+    {
+        "id": "8",
+        "name": "PC GAMER BASIC",
+        "description": "Procesador Intel Core i3. Memoria RAM 8gb. Grafica NVIDIA 1080, ETS",
+        "price": "165999",
+        "images": "/imagenes/destacado4.jpg",
+        "category": "PC Armada",
+        "colors": "gray-black"
+    },
+    {
+        "id": 9,
+        "name": "dd",
+        "description": "dd",
+        "price": "dd",
+        "image": "1696378095320_img_.jpg"
+    }
 ]

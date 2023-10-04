@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userControllers = require('../controllers/userControllers');
-const { body, check } = require ('express-validator');
+//const { body, check } = require ('express-validator');
 const multer = require('multer');
 
 const validation = require('../validator/validation');
@@ -29,7 +29,7 @@ const validation = [
 */
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/userImg');
+    cb(null, './public/users');
   },
   filename: function (req, file, cb) {
     cb(
@@ -50,13 +50,13 @@ router.get('/login', function(req, res){
         res.send('No existe el usuario en sesión!');
     }
 })
-
+/*
 router.get('/logout', function(req, res){
     req.session.destroy();
     res.clearCookie('age');
     res.send('cerraste sesión!');
 })
-
+*/
 router.get('/register', userControllers.register)
 router.post('/register', upload.single('imagen'), userControllers.registered)
 
