@@ -8,4 +8,4 @@ en esta semana se realizo lo que nos pedia del sprint 4, aunque con algunas comp
 nos intentamos repartir el tiempo en que nos reuniamos para realizar el proyecto y tambien con algunas ideas que se pueden implementar en base al codigo que ya tenemos, relizamos algunas de las tareas de la tabla de trello que teniamos pendientes.
 ___________________________________________________________________________________________________
 Semanas del 18 de Septiembre al 3 de Octubre
- en estas semanas nos reunimos pocas veces, pero las reuniones fueron más productivas, tuvimos muchos problemas y errores con el codigo se logro resolverlos en equipo, escuchando los diferentes puntos de entendimiento de cada integrante, y con ayuda de nuestros profesores. Para finalmente concluir el sprint 4.
+ en estas semanas nos reunimos pocas veces, pero las reuniones fueron más productivas, tuvimos muchos problemas y errores con el codigo, se logro resolverlos en equipo, escuchando los diferentes puntos de entendimiento de cada integrante, y con ayuda de nuestros profesores. Para finalmente concluir el sprint 4.
