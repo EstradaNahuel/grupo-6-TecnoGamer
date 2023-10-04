@@ -8,7 +8,7 @@ const app = express();
 
 const configMulter = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, path.join(__dirname, '../../public/imagenes'))
+        cb(null, path.join(__dirname, '../public/imagenes'))
     },
     filename: function(req, file, cb){
         cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`)
@@ -21,7 +21,7 @@ router.get("/detail/:id", productController.detail);
 //router.get('/products/productcart', productController.productCart);
 
 router.get("/create", productController.create);
-router.post("/create/:id", upload.single("image"), productController.store);
+router.post("/create", upload.single("image"), productController.store);
 
 router.get("/edit/:id", productController.edit);
 router.put("/edit/:id", productController.update);
