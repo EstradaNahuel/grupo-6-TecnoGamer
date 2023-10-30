@@ -1,7 +1,7 @@
 const fs = require('fs')
-const path = requir('path')
+const path = require('path')
 const bcrypt = require('bcryptjs');
-const { validationResult } = require('express-validator');
+const { validation } = require('express-validator');
 
 const dataJson = fs.readFileSync(path.join(__dirname, '../data/users.json'));
 const users = JSON.parse(dataJson);
@@ -12,8 +12,8 @@ function updateUser() {
 }
 
 const userControllers=  {
-    login: (req, res)=> {
-        const resultError = validationResult(req)
+    /*login: (req, res)=> {
+        const resultError = validation(req)
         console.log(resultError);
         if(resultError.isEmpty()){
             const user = {
@@ -28,6 +28,37 @@ const userControllers=  {
             res.render('/home', { errors: resultError.array() })
         }
         
+    },*/
+    login: (req, res) => {
+        res.render('./users/login');
+    },
+    Logging : (req, res) => {
+      let userFound = users.find((user) => req.body.email == user.email);
+      if(userFound) {
+        let correctPassword = bcrypt.compareSync(req.body.password, userFound.password)
+        if(correctPassword){
+          delete userFound.password;
+          req.session = userFound;
+          if(req.body.rememberMe){
+            res.cookie('userEmail', req.body.email, { maxAge: 1000 * 120})
+          }
+          return res.redirect(301, '/')
+        }
+        return res.render('login', {
+          errors: {
+            email: {
+              msg: "no es el mismo email"
+            }
+          }
+        })
+      }else{
+      return res.render('login', {
+         errors: 
+          { email: 
+            { msg: "El email no esta regitrado" }
+          } 
+        })
+      }  
     },
     Logged: (req, res) => {
         console.log(req.session);
@@ -37,7 +68,7 @@ const userControllers=  {
         res.render('register');
       },
     registered: (req, res) => {
-        const errors = validationResult(req);
+        const errors = validation(req);
         if (!errors.isEmpty()) {
           return res.render('register', { errors: errors.errors, old: req.body });
         } else {
@@ -51,7 +82,7 @@ const userControllers=  {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             admin: false,
-            imagen: imageFilename,
+            image: imageFilename,
           };
           users.push(userNew);
           updateUser();

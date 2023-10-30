@@ -8,34 +8,41 @@
 <body>
     <header>
         <%- include('../partials/header') %>
+         <h1>Carrito de compras</h1>
     </header>
-    <h1>Carrito de compras</h1>
-    <table class="cart-table">
-        <thead>
-            <tr>
-                <th>Imagen</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-            </tr>
-        </thead>
-        <tbody class="cart-table__body">
-            <!-- Aquí se mostrarán los productos agregados al carrito -->
-        </tbody>
-    </table>
-    <div class="cart-coupon">
-        <label for="coupon-code">Código de descuento:</label>
-        <input type="text" id="coupon-code" class="cart-coupon__code">
-        <button class="cart-coupon__apply">Aplicar</button>
-    </div>
-    <div class="cart-total">
-        Total: $<span class="cart-total__amount">0.00</span>
-    </div>
-    <button class="cart-checkout">Finalizar compra</button>
+    <main>
+        <section aria-label="Carrito de compras"> 
+            <table class="cart">
+                <caption>Lista de productos en el carrito</caption> 
+                <thead>
+                    <tr>
+                        <th scope="col">Imagen</th> 
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody class="cart-table__body">
+                    <!-- Aquí se mostrarán los productos agregados al carrito -->
+                </tbody>
+            </table>
+            <div class="cart-coupon">
+                <label for="coupon-code">Código de descuento:</label>
+                <input type="text" id="coupon-code" class="cart-coupon__code">
+                <button class="cart-coupon__apply">Aplicar</button>
+            </div>
+            <div class="cart-total">
+                Total: $<span class="cart-total__amount">0.00</span>
+            </div>
+            <button class="cart-checkout">Finalizar compra</button>
+        </section>
+    </main>
+    <!-- Aquí puedes incluir el pie de página y otros elementos que no sean el contenido principal de la página -->
+</body>
+</html>
 
-    <!-- Agrega una etiqueta script para incluir el código JavaScript -->
-    <script src="/js/cart.js"></script>
+
     <footer>
            <%- include('../partials/footer') %> 
     </footer>

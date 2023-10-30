@@ -13,12 +13,12 @@ const mainControllers = {
             "title": "registro",
             "css":"register"
         })
-    },
+    /* },
     login: (req,res)=>{
         res.render("./users/login", {
             "title": "ingreso",
             "css":"login"
-        })
+        })*/
     },
     productcart: (req,res)=>{
         res.render("./products/productcart", {

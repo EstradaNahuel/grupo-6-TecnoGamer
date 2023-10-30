@@ -23,7 +23,7 @@ function deleteProducts(productsNew){
 }
 
 const productControllers = {
-    list: (req, res)=>{
+    list: (req, res) => {
         res.render('./products/list-product.ejs', { products: products})
     }, 
     detail: function(req,res){
@@ -36,18 +36,19 @@ const productControllers = {
     //productCart: (req, res) => {
      //   return res.render('./products/productcart');
     //},
-    create: (req, res)=>{
+    create: (req, res) => {
         res.render('./products/create-product');
     },
-    store: (req, res)=>{
+    store: (req, res) => {
         const form = req.body;
         const nameFile = req.file.filename;
-		//const pos = h-1;
-
+    
         const newProduct = {
             id: products.length+ 1 ,
             name: form.name,
             description: form.description,
+            category: form.category, 
+            color: form.color,
             price: form.price,
             image: nameFile
         }
@@ -56,31 +57,34 @@ const productControllers = {
     },
     edit: (req, res)=> {
         const idProduct = req.params.id
-        const productFound = products.find(function(elem){
-            return elem.id == idProduct   
+        const productFound = products.find(function(products){
+            return products.id == idProduct   
         })
         res.render('./products/edit-product', { productFound: productFound });
     },
     update: (req, res) => {
         const id = req.params.id
         const form = req.body;
-        const nameFile = req.file.filename
-        const productFound = products.find(function(elem){
-            return elem.id == id
-       
-    })
-        productFound.name = form.name;
-        productFound.description = form.description;
-        productFound.price = form.price;
-        productFound.image = nameFile;
-
-        updateProducts();
-
+        const nameFile = req.file.filename;
+        const productFound = products.find(function(products){
+            return products.id == id
+        })
+    
+        if (productFound) {
+            productFound.name = form.name;
+            productFound.description = form.description;
+            productFound.category = form.category; 
+            productFound.color = form.color; 
+            productFound.price = form.price;
+            productFound.image = nameFile;
+    
+            updateProducts();
+        }
         res.redirect('/products/list');
     },
     destroy: (req, res) => {
         const idProduct = req.params.id;
-		const productsNew = products.filter( elem => elem.id != idProduct );
+		const productsNew = products.filter( product => product.id != idProduct );
 		deleteProducts(productsNew);
 		res.redirect('/products/list');
         

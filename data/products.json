@@ -2,80 +2,97 @@
     {
         "id": "1",
         "name": "PC GAMER BASIC",
-        "description": "Procesador dual core, memoria RAM 8gb. Grafica NVIDIA 630, ETC",
-        "price": "150000",
-        "images": "/imagenes/recomendacion1.jpg",
-        "category": "PC Armada",
-        "colors": "black"
+        "description": "",
+        "price": "170000",
+        "image": "1696633161367_img_.jpg",
+        "category": "",
+        "colors": "black",
+        "color": ""
     },
     {
         "id": "2",
         "name": "PC GAMER MEDIA",
-        "description": "Procesador Intel Core i5, memoria RAM 16gb. Grafica NVIDIA 1080, ETC",
+        "description": "",
         "price": "330000",
-        "images": "/imagenes/recomendacion2.jpg",
-        "category": "PC Armada",
-        "colors": "white"
+        "image": "1696630810297_img_.jpg",
+        "category": "",
+        "colors": "white",
+        "color": ""
     },
     {
         "id": "3",
         "name": "PACK: Teclado + Mause + Almohadilla",
-        "description": "Teclado mecánico. Mause metálico. Almohadilla 10x30cm",
+        "description": "",
         "price": "20000",
-        "images": "/imagenes/recomendacion3.jpg",
-        "category": "Hardware",
-        "colors": "black"
+        "image": "1696630827555_img_.jpg",
+        "category": "",
+        "colors": "black",
+        "color": ""
     },
     {
         "id": "4",
         "name": "PACK TECLADO + ALMOHADOLLA + MAUSE + AUDICULARES",
-        "description": "Teclado mecánico. Mause ERGB. Audiculares inalambricos",
+        "description": "",
         "price": "27000",
-        "images": "/imagenes/recomendacion4.jpg",
-        "category": "Hardware",
-        "colors": "red-black"
+        "image": "1696631681748_img_.jpg",
+        "category": "",
+        "colors": "red-black",
+        "color": ""
     },
     {
         "id": "5",
         "name": "PC GAMER ALTA CON RGB",
-        "description": "Procesador Intel Core i7. Memoria RAM 32gb. Grafica NVIDIA 3060, ETS",
+        "description": "",
         "price": "370000",
-        "images": "/imagenes/destacado1.jpg",
-        "category": "PC Armada",
-        "colors": "black"
+        "image": "1696631707745_img_.jpg",
+        "category": "",
+        "colors": "black",
+        "color": ""
     },
     {
         "id": "6",
         "name": "JOYSTICK INALAMBRICO PC",
-        "description": "Mause inalambrico, con luces RGB",
+        "description": "",
         "price": "25000",
-        "images": "/imagenes/destacado2.jpg",
-        "category": "Oferta",
-        "colors": "white-black"
+        "image": "1696631846768_img_.jpg",
+        "category": "",
+        "colors": "white-black",
+        "color": ""
     },
     {
         "id": "7",
         "name": "CARGADOR DE JOYSTICK INALAMBRICO PC",
-        "description": "Cargador, entrada USB, 50voltios, carga rapida",
+        "description": "",
         "price": "14700",
-        "images": "/imagenes/destacado3.jpg",
-        "category": "Oferta",
-        "colors": "white-black"
+        "image": "1696631867721_img_.jpg",
+        "category": "",
+        "colors": "white-black",
+        "color": ""
     },
     {
         "id": "8",
         "name": "PC GAMER BASIC",
-        "description": "Procesador Intel Core i3. Memoria RAM 8gb. Grafica NVIDIA 1080, ETS",
+        "description": "",
         "price": "165999",
-        "images": "/imagenes/destacado4.jpg",
-        "category": "PC Armada",
-        "colors": "gray-black"
+        "image": "1696631886322_img_.jpg",
+        "category": "",
+        "colors": "gray-black",
+        "color": ""
     },
     {
         "id": 9,
-        "name": "dd",
-        "description": "dd",
-        "price": "dd",
-        "image": "1696378095320_img_.jpg"
+        "name": "laptop 15.6 Asus",
+        "description": "Procesador Intel i5, memoria raw 16gb, SSD 500gb",
+        "price": "300000",
+        "image": "1696633343497_img_.jpg",
+        "category": "laptop",
+        "color": "blanco"
+    },
+    {
+        "id": 10,
+        "name": "laptop 14.0 Asus",
+        "description": "Procesador Intel Celeron, memoria raw 4gb, SSD 128gb",
+        "price": "180000",
+        "image": "1696548852316_img_.jpg"
     }
 ]

@@ -1,4 +1,4 @@
-const { body } = require('express-validator');
+const { body, validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
@@ -7,7 +7,7 @@ const dataJson = fs.readFileSync(path.join(__dirname, '../data/users.json'));
 const users = JSON.parse(dataJson);
 
 const validation = {
-  logged: [
+  login: [
     body('email')
       .notEmpty()
       .withMessage('El campo email no puede estar vacío')
