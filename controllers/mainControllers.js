@@ -32,7 +32,7 @@ const mainControllers = {
             "css":"productdetail"
         })
     }
-    */
+    */////
 }
  
 
