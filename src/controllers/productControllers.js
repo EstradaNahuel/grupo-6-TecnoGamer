@@ -1,94 +1,135 @@
 const fs = require('fs');
 const path = require('path');
-
-const dataJson = fs.readFileSync(path.join(__dirname, "../data/products.json"));
-
-const products = JSON.parse(dataJson, 'utf-8');
-
-
-function addProduct(product){
-    products.push(product);
-    const productString = JSON.stringify(products, null, 4);
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), productString);
-};
-
-function updateProducts(){
-    const productString = JSON.stringify(products, null, 4);
-    fs.writeFileSync(path.join(__dirname, "../data/products.json"), productString);
-};
-
-function deleteProducts(productsNew){
-	const productsString = JSON.stringify(productsNew, null, 4)
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
-}
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require('sequelize');
+const moment = require('moment');
 
 const productControllers = {
     list: (req, res) => {
-        res.render('./products/list-product.ejs', { products: products})
+        db.product.findAll()
+        .then(products => {
+            res.render('./products/list-product.ejs', { products: products})
+        }) 
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al obtener los productos');
+        });
     }, 
-    detail: function(req,res){
-    let id = req.params.id;
-    let productFound = products.find(function(product){
-        return product.id == id;
-    })
-    res.render('./products/productdetail', {product: productFound})
+    detail: (req,res) => {
+        db.product.findByPk(req.params.id)
+        .then((product) => {
+            res.render('./products/productdetail', { product: product })   
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al obtener el detalle del producto');
+        });
     },
-    //productCart: (req, res) => {
-     //   return res.render('./products/productcart');
-    //},
-    create: (req, res) => {
+    
+    productCart: (req, res) => {
+        return res.render('productCart');
+    },
+    /*create: (req, res) => {
         res.render('./products/create-product');
+    },*/
+    create: (req, res) => {
+        db.CategoryProduct.findAll()
+        .then( category => {
+            return res.render('./products/create-product', { category });
+        })  
     },
     store: (req, res) => {
         const form = req.body;
         const nameFile = req.file.filename;
-    
-        const newProduct = {
-            id: products.length+ 1 ,
+        db.product.create ({
             name: form.name,
             description: form.description,
-            category: form.category, 
+            category_producto_id: form.category_producto_id,
             color: form.color,
             price: form.price,
-            image: nameFile
-        }
-        addProduct(newProduct);
-        res.redirect('/products/list');
-    },
-    edit: (req, res)=> {
-        const idProduct = req.params.id
-        const productFound = products.find(function(products){
-            return products.id == idProduct   
+            image: nameFile,
+            stock: form.stock,
+            fecha_creacion: new Date().toLocaleDateString(),
+            fecha_modificacion: new Date().toLocaleDateString()
         })
-        res.render('./products/edit-product', { productFound: productFound });
+        .then((newProduct) => {
+            console.log(newProduct);
+            res.redirect('/products/list');
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al crear el producto');
+        });
+    },    
+    edit: (req, res) => {
+        const category = db.CategoryProduct.findAll();
+        const productFound = db.Product.findByPk(req.params.id);
+            
+        Promise.all([category, productFound])
+        .then(function ([category, product]) {
+            res.render('./products/edit-product', { productFound: product, category });
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al editar el producto');
+        });
     },
     update: (req, res) => {
-        const id = req.params.id
+        const id = req.params.id;
         const form = req.body;
         const nameFile = req.file.filename;
-        const productFound = products.find(function(products){
-            return products.id == id
+        db.product.update(
+            {
+                nombre: form.name,
+                price: form.price,
+                discount: form.discount,
+                category_producto_id: form.category_producto_id,
+                description: form.description,
+                color: form.color,
+                image: nameFile,
+                type_category: form.type_category,
+                stock: form.stock,
+                fecha_modificacion: new Date().toLocaleDateString()
+            },
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        )
+        .then(() => {
+            res.redirect('/products/list');
         })
-    
-        if (productFound) {
-            productFound.name = form.name;
-            productFound.description = form.description;
-            productFound.category = form.category; 
-            productFound.color = form.color; 
-            productFound.price = form.price;
-            productFound.image = nameFile;
-    
-            updateProducts();
-        }
-        res.redirect('/products/list');
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al actualizar el producto');
+        });
     },
-    destroy: (req, res) => {
-        const idProduct = req.params.id;
-		const productsNew = products.filter( product => product.id != idProduct );
-		deleteProducts(productsNew);
-		res.redirect('/products/list');
-        
-      },
+    delete: function (req, res) {
+        db.Product.findByPk(req.params.id)
+        .then((product) => {
+            res.render("./products/delete.ejs", { product });
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al buscar el producto para eliminar');
+        });
+    },
+    destroy : (req, res) => {
+        db.Product.destroy({
+            where: {
+                id: req.params.id,
+            },
+        })
+        .then(() => {
+            res.redirect('/products/list');
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Hubo un error al eliminar el producto');
+        });
+    }    
 };
  
 module.exports = productControllers;

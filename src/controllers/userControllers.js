@@ -1,35 +1,62 @@
 const fs = require('fs')
 const path = require('path')
 const bcrypt = require('bcryptjs');
+const multer = require('multer');
+const db = require('../database/models');
+const sequelize = db.sequelize;
 const { validation } = require('express-validator');
 
-const dataJson = fs.readFileSync(path.join(__dirname, '../data/users.json'));
-const users = JSON.parse(dataJson);
-
-function updateUser() {
-  const usersJSON = JSON.stringify(users, null, 4);
-  fs.writeFileSync(path.join(__dirname, '../data/users.json'), usersJSON);
-}
-
 const userControllers=  {
-    /*login: (req, res)=> {
-        const resultError = validation(req)
-        console.log(resultError);
-        if(resultError.isEmpty()){
-            const user = {
-                name: req.body.name,
-                email:  req.body.email,
-            }
-           //res.cookie('name', req.body.age, { maxAge: 60000 * 24 });
-           req.session.user = user
-           res.render('/home', { user: user, email: req.body.email  });
-
-        }else {
-            res.render('/home', { errors: resultError.array() })
+  register: (req, res) => {
+    return res.render('./users/register');
+  },
+  registered: (req, res) => {
+    const form = req.body;
+    const newImage = req.file ? '/users/' + req.file.filename : '';
+    const hashPassword = bcrypt.hashSync(form.password, 10);
+    db.User.create({
+      nombre: form.nombre,
+      apellido: form.apellido,
+      email: form.email,
+      contrasenia: hashPassword,
+      categoria: form.categoria,
+      fecha_nacimiento: form.fecha_nacimiento,
+      imagen: newImage,
+      fecha_creacion: new Date().toLocaleDateString(),
+      fecha_modificacion: new Date().toLocaleDateString(),
+    }).then((newUser) => {
+      console.log(newUser);
+      return res.redirect("/");
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).send('Hubo un error al registrar el usuario');
+    });
+  },
+  login: (req, res) => {
+    return res.render('./users/login');
+  },
+  loggedIn: (req, res) => {
+    const form = req.body;
+    db.User.findOne({
+        where: {
+            email: form.email,
+        },
+    })
+    .then((user) => {
+        if (user && bcrypt.compareSync(form.password, user.contrasenia)) {
+            req.session.user = user;
+            return res.redirect("/");
+        } else {
+            return res.render('./users/login', { error: 'Email o contraseña incorrectos' });
         }
-        
-    },*/
-    login: (req, res) => {
+    })
+    .catch(error => {
+        console.error(error);
+        res.status(500).send('Hubo un error al iniciar sesión');
+    });
+  },
+    /*login: (req, res) => {
         res.render('./users/login');
     },
     Logging : (req, res) => {
@@ -88,6 +115,6 @@ const userControllers=  {
           updateUser();
           res.redirect('/home');
         }
-      },
+      },*/
 }
 module.exports = userControllers

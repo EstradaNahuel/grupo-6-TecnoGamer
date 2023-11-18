@@ -1,9 +1,9 @@
 -- Elimina la base de datos si existe
-DROP DATABASE IF EXISTS dato;
+DROP DATABASE IF EXISTS tecno;
 
 -- Crea la base de datos
-CREATE DATABASE dato;
-USE dato;
+CREATE DATABASE tecno;
+USE tecno;
 
 -- Crea la tabla Categoria
 CREATE TABLE categoria (

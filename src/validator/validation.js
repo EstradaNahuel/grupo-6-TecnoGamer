@@ -2,10 +2,10 @@ const { body, validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-
+/*
 const dataJson = fs.readFileSync(path.join(__dirname, '../data/users.json'));
 const users = JSON.parse(dataJson);
-
+*/
 const validation = {
   login: [
     body('email')
