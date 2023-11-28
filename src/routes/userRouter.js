@@ -50,7 +50,7 @@ router.post('/login', function(req, res){
     }
 })*/
 router.get('/login', validations.login, userControllers.login)
-router.post('/login', userControllers.Logging);
+router.post('/login', userControllers.logging);
 /*
 router.get('/logout', function(req, res){
     req.session.destroy();

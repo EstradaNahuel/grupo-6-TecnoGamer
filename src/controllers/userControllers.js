@@ -36,7 +36,7 @@ const userControllers=  {
   login: (req, res) => {
     return res.render('./users/login');
   },
-  loggedIn: (req, res) => {
+  logging: (req, res) => {
     const form = req.body;
     db.User.findOne({
         where: {
