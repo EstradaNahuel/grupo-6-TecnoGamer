@@ -4,12 +4,13 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const moment = require('moment');
+//const { ValidationResults } = require(express-validator)
 
 const productControllers = {
     list: (req, res) => {
-        db.product.findAll()
+        db.Product.findAll()
         .then(products => {
-            res.render('./products/list-product.ejs', { products: products})
+            res.render('./products/list-product.ejs', { products })
         }) 
         .catch(error => {
             console.error(error);
@@ -17,9 +18,9 @@ const productControllers = {
         });
     }, 
     detail: (req,res) => {
-        db.product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
         .then((product) => {
-            res.render('./products/productdetail', { product: product })   
+            res.render('./products/productdetail', { product })   
         })
         .catch(error => {
             console.error(error);
@@ -34,7 +35,7 @@ const productControllers = {
         res.render('./products/create-product');
     },*/
     create: (req, res) => {
-        db.CategoryProduct.findAll()
+        db.Categoria.findAll()
         .then( category => {
             return res.render('./products/create-product', { category });
         })  
@@ -45,7 +46,7 @@ const productControllers = {
         db.product.create ({
             name: form.name,
             description: form.description,
-            category_producto_id: form.category_producto_id,
+            category: form.category,
             color: form.color,
             price: form.price,
             image: nameFile,
@@ -63,7 +64,7 @@ const productControllers = {
         });
     },    
     edit: (req, res) => {
-        const category = db.CategoryProduct.findAll();
+        const category = db.Categoria.findAll();
         const productFound = db.Product.findByPk(req.params.id);
             
         Promise.all([category, productFound])
@@ -84,7 +85,7 @@ const productControllers = {
                 nombre: form.name,
                 price: form.price,
                 discount: form.discount,
-                category_producto_id: form.category_producto_id,
+                category: form.category,
                 description: form.description,
                 color: form.color,
                 image: nameFile,
