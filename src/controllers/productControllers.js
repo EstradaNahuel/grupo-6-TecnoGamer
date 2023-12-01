@@ -65,11 +65,12 @@ const productControllers = {
     },    
     edit: (req, res) => {
         const category = db.Categoria.findAll();
-        const productFound = db.Product.findByPk(req.params.id);
+        const product = db.Product.findByPk(req.params.id);
             
-        Promise.all([category, productFound])
+        Promise.all([category, product])
         .then(function ([category, product]) {
-            res.render('./products/edit-product', { productFound: product, category });
+            //return res.send(product)
+            res.render('./products/edit-product', { product, category });
         })
         .catch(error => {
             console.error(error);

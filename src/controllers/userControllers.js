@@ -12,7 +12,7 @@ const userControllers=  {
   },
   registered: (req, res) => {
     const form = req.body;
-    const newImage = req.file ? '/users/' + req.file.filename : '';
+    const newImage = req.file ? './public/users' + req.file.filename : '';
     const hashPassword = bcrypt.hashSync(form.password, 10);
     db.User.create({
       nombre: form.nombre,

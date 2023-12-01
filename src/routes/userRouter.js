@@ -49,7 +49,7 @@ router.post('/login', function(req, res){
         res.send('No existe el usuario en sesión!');
     }
 })*/
-router.get('/login', validations.login, userControllers.login)
+router.get('/login', validations["login"], userControllers.login)
 router.post('/login', userControllers.logging);
 /*
 router.get('/logout', function(req, res){

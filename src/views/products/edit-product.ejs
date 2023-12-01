@@ -8,27 +8,27 @@
   <%- include('../partials/header')%>
 <h2>Formulario de Edición de Producto</h2>
 
-<form action="/products/edit/<%= productFound.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+<form action="/products/edit/<%= product.Id %>?_method=PUT" method="POST" enctype="multipart/form-data">
   <label for="pid">Nombre del Producto:</label>
   <input type="text" id="id" name="id">
   
   <label for="pname">Nombre del Producto:</label>
-  <input type="text" id="pname" name="name" value="<%= productFound.name  %>">
+  <input type="text" id="pname" name="name" value="<%= product.Nombre  %>">
   
   <label for="pdesc">Descripción del Producto:</label>
-  <input type="text" id="pdesc" name="description"><%= productFound.description  %>
+  <input type="text" id="pdesc" name="description"><%= product.Descripcion  %>
   
   <label for="pcategory">Categoría del Producto:</label>
-  <input type="text" id="pcategory" name="category"><%= productFound.category  %>
+  <input type="text" id="pcategory" name="category"><%= product.category  %>
   
   <label for="pcolor">Color del Producto:</label>
-  <input type="text" id="pcolor" name="color"><%= productFound.color  %>
+  <input type="text" id="pcolor" name="color"><%= product.Color  %>
   
   <label for="image">Imagen:</label>
-  <input type="file" name="image" value="<%=  productFound.image %>">
+  <input type="file" name="image" value="<%=  product.Imagen %>">
   
   <label for="pprice">Precio del Producto:</label>
-  <input type="text" id="pprice" name="price" value="<%=  productFound.price %>">
+  <input type="text" id="pprice" name="price" value="<%=  product.Precio %>">
   
   <input type="submit" value="Actualizar">
   

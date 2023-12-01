@@ -32,10 +32,10 @@ CREATE TABLE producto (
 
 -- Crea la tabla usuario
 CREATE TABLE usuario (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    Id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
-    nombre_de_perfi VARCHAR(50) NOT NULL,
+    nombre_de_perfil VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     imagen_de_perfil VARCHAR(255) NOT NULL,  
@@ -45,29 +45,29 @@ CREATE TABLE usuario (
 -- Crea la tabla Carrito
 CREATE TABLE carrito (
     Id INT PRIMARY KEY,
-    idproducto INT,
-    idusuario INT,
+    Idproducto INT,
+    Idusuario INT,
     Precio DECIMAL(10,2),
     Estado VARCHAR(50),
-    FOREIGN KEY (idproducto) REFERENCES Producto(Id),
-    FOREIGN KEY (idusuario) REFERENCES usuario(id)
+    FOREIGN KEY (Idproducto) REFERENCES Producto(Id),
+    FOREIGN KEY (Idusuario) REFERENCES usuario(Id)
 );
 
 -- Crea la tabla usuario_carrito
 CREATE TABLE usuario_carrito (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    idUsuario INT,
-    idCarrito INT,
-    FOREIGN KEY (idUsuario) REFERENCES usuario(id),
-    FOREIGN KEY (idCarrito) REFERENCES carrito(Id)
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    IdUsuario INT,
+    IdCarrito INT,
+    FOREIGN KEY (IdUsuario) REFERENCES usuario(Id),
+    FOREIGN KEY (IdCarrito) REFERENCES carrito(Id)
 );
 
 -- Crea la tabla orden
 CREATE TABLE orden (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    Id INT PRIMARY KEY AUTO_INCREMENT,
     cantidad INT,
-    idUsuario INT,
-    FOREIGN KEY (idUsuario) REFERENCES usuario(id),
+    IdUsuario INT,
+    FOREIGN KEY (IdUsuario) REFERENCES usuario(Id),
     total DECIMAL(10,2)
 );
 
