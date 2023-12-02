@@ -72,9 +72,9 @@ CREATE TABLE orden (
 );
 
 INSERT INTO producto (Id, Idcategoria, Nombre, Descripcion, Marca, Precio, Color, Imagen)
-VALUES (1, 1, 'PC GAMER BASIC', 'Procesador i3 10gen, memoria raw 8gb, ssd 250gb', 'Marca intel', 200000.99, 'negro', '1696633343497_img_.jpg'),
-       (2, 1, 'PC GAMER MEDIA', 'Procesador i5 10gen, memoria raw 16gb, ssd 500gb', 'MArca intel', 300000.99, 'Azul', '1696630810297_img_.jpg'),
-       (3, 2, 'Laptop 15.6', 'prosesador intel i5, memoria raw 16gb, ssd 500gb', 'Marca Asus', 290000.99, 'Gris', '1696548852316_img_.jpg');
+VALUES (1, 1, 'PC GAMER BASIC', 'Procesador i3 10gen, memoria raw 8gb, ssd 250gb', 'intel', 200000.99, 'negro', '1696633343497_img_.jpg'),
+       (2, 1, 'PC GAMER MEDIA', 'Procesador i5 10gen, memoria raw 16gb, ssd 500gb', 'intel', 300000.99, 'Azul', '1696630810297_img_.jpg'),
+       (3, 2, 'Laptop 15.6', 'prosesador intel i5, memoria raw 16gb, ssd 500gb', 'Asus', 290000.99, 'Gris', '1696548852316_img_.jpg');
 
 INSERT INTO usuario (id, nombre, apellido, nombre_de_perfi, email, password, imagen_de_perfil, perfil)
-VALUES (1, 'nahel', 'est', 'nahel', 'nahelest@gmail.com', '1234567890', '/imagenes/users/ADM.jpg', 'admin');
+VALUES (1, 'nahel', 'est', 'nahel', 'nahelest@gmail.com', '1234567890', '/imagenes/users/ADM.jpg', 'administrador');

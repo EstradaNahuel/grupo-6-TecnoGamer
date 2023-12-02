@@ -21,8 +21,9 @@ body {
   
   input[type="submit"] {
     display: block;
-    margin-top: 20px;
-    background-color: #4CAF50;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: red;
     color: white;
     border: none;
-  }
+}

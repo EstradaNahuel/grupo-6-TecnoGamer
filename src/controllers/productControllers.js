@@ -36,23 +36,25 @@ const productControllers = {
     },*/
     create: (req, res) => {
         db.Categoria.findAll()
-        .then( category => {
-            return res.render('./products/create-product', { category });
+        .then( categoria => {
+            return res.render('./products/create-product', { categoria });
         })  
     },
     store: (req, res) => {
         const form = req.body;
         const nameFile = req.file.filename;
-        db.product.create ({
-            name: form.name,
-            description: form.description,
-            category: form.category,
-            color: form.color,
-            price: form.price,
-            image: nameFile,
+        console.log('Valor de form.Idcategoria:', form.Idcategoria);
+        db.Product.create ({
+            Nombre: form.Nombre,
+            Descripcion: form.Descripcion,
+            Categoria: form.Categoria,
+            Color: form.Color,
+            Precio: form.Precio,
+            Marca: form.Marca,
+            Imagen: nameFile /*,
             stock: form.stock,
             fecha_creacion: new Date().toLocaleDateString(),
-            fecha_modificacion: new Date().toLocaleDateString()
+            fecha_modificacion: new Date().toLocaleDateString()*/
         })
         .then((newProduct) => {
             console.log(newProduct);
@@ -81,18 +83,17 @@ const productControllers = {
         const id = req.params.id;
         const form = req.body;
         const nameFile = req.file.filename;
-        db.product.update(
+        db.Product.update(
             {
-                nombre: form.name,
-                price: form.price,
-                discount: form.discount,
+                Nombre: form.Nombre,
+                Precio: form.Precio,
                 category: form.category,
-                description: form.description,
-                color: form.color,
-                image: nameFile,
-                type_category: form.type_category,
-                stock: form.stock,
-                fecha_modificacion: new Date().toLocaleDateString()
+                Descripcion: form.Descripcion,
+                Color: form.Color,
+                Imagen: nameFile,
+                Marca: form.Marca
+                /*stock: form.stock,
+                fecha_modificacion: new Date().toLocaleDateString()*/
             },
             {
                 where: {

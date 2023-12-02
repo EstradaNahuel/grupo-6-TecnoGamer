@@ -29,7 +29,7 @@ const validation = [
 */
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './public/users');
+    cb(null, './public/user');
   },
   filename: function (req, file, cb) {
     cb(
@@ -49,8 +49,8 @@ router.post('/login', function(req, res){
         res.send('No existe el usuario en sesión!');
     }
 })*/
-router.get('/login', validations["login"], userControllers.login)
-router.post('/login', userControllers.logging);
+router.get("/login", validations["login"], userControllers.login)
+router.post("/login", userControllers.logging);
 /*
 router.get('/logout', function(req, res){
     req.session.destroy();
@@ -58,7 +58,7 @@ router.get('/logout', function(req, res){
     res.send('cerraste sesión!');
 })
 */
-router.get('/register', userControllers.register)
-router.post('/register', upload.single('image'), userControllers.registered)
+router.get("/register", userControllers.register)
+router.post("/register", upload.single('imagen_de_perfil'), userControllers.registered)
 
 module.exports = router;
