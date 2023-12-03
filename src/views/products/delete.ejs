@@ -8,9 +8,9 @@
   <body>
     <%- include('../partials/header')%>
     <h1>Eliminar Producto </h1>
-    <h4>Estas por borrar este producto : <%= product.nombre %>?</h4>
+    <h4>Estas por borrar este producto : <%= product.Nombre %></h4>
     <p>
-        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+        <form action="/products/delete/<%= product.Id %>?_method=DELETE" method="POST">
             <br>
             <div> 
                 <button class="botonBorrar" type="submit">Borrar el Producto</button>

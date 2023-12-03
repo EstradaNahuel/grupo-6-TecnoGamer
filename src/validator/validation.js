@@ -36,20 +36,20 @@ const validation = {
       .notEmpty()
       .withMessage('El campo contraseña no puede estar vacío'),
   ],
-  registered: [
-    body('firstname')
+  register: [
+    body('nombre_de_perfi')
       .notEmpty()
       .withMessage('El campo nombre no puede estar vacío')
       .bail()
       .isLength({ min: 3 })
       .withMessage('El nombre debe tener al menos 3 caracteres'),
-    body('surname')
+    body('apellido')
       .notEmpty()
       .withMessage('El campo apellido no puede estar vacío')
       .bail()
       .isLength({ min: 4 })
       .withMessage('El apellido debe tener al menos 4 caracteres'),
-    body('name')
+    body('nombre')
       .isLength({ min: 4 })
       .withMessage('El nombre de usuario debe tener al menos 4 caracteres'),
     body('email')
@@ -74,7 +74,7 @@ const validation = {
       .isLength({ min: 8 })
       .withMessage('La contraseña debe tener al menos 8 caracteres'),
     ,
-    body('imagen')
+    body('imagen_de_perfil')
       .custom((value, { req }) => {
         return req.file;
       })

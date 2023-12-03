@@ -22,13 +22,11 @@ body {
   input[type="file"] {
     margin-top: 5px;
   }
-  
   input[type="submit"] {
     display: block;
-    margin-top: 20px;
+    margin: 20px auto;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: red;
     color: white;
     border: none;
-  }
-  
+}

@@ -32,10 +32,10 @@ CREATE TABLE producto (
 
 -- Crea la tabla usuario
 CREATE TABLE usuario (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    Id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
-    nombre_de_perfi VARCHAR(50) NOT NULL,
+    nombre_de_perfil VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     imagen_de_perfil VARCHAR(255) NOT NULL,  
@@ -45,36 +45,36 @@ CREATE TABLE usuario (
 -- Crea la tabla Carrito
 CREATE TABLE carrito (
     Id INT PRIMARY KEY,
-    idproducto INT,
-    idusuario INT,
+    Idproducto INT,
+    Idusuario INT,
     Precio DECIMAL(10,2),
     Estado VARCHAR(50),
-    FOREIGN KEY (idproducto) REFERENCES Producto(Id),
-    FOREIGN KEY (idusuario) REFERENCES usuario(id)
+    FOREIGN KEY (Idproducto) REFERENCES Producto(Id),
+    FOREIGN KEY (Idusuario) REFERENCES usuario(Id)
 );
 
 -- Crea la tabla usuario_carrito
 CREATE TABLE usuario_carrito (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    idUsuario INT,
-    idCarrito INT,
-    FOREIGN KEY (idUsuario) REFERENCES usuario(id),
-    FOREIGN KEY (idCarrito) REFERENCES carrito(Id)
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    IdUsuario INT,
+    IdCarrito INT,
+    FOREIGN KEY (IdUsuario) REFERENCES usuario(Id),
+    FOREIGN KEY (IdCarrito) REFERENCES carrito(Id)
 );
 
 -- Crea la tabla orden
 CREATE TABLE orden (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    Id INT PRIMARY KEY AUTO_INCREMENT,
     cantidad INT,
-    idUsuario INT,
-    FOREIGN KEY (idUsuario) REFERENCES usuario(id),
+    IdUsuario INT,
+    FOREIGN KEY (IdUsuario) REFERENCES usuario(Id),
     total DECIMAL(10,2)
 );
 
 INSERT INTO producto (Id, Idcategoria, Nombre, Descripcion, Marca, Precio, Color, Imagen)
-VALUES (1, 1, 'PC GAMER BASIC', 'Procesador i3 10gen, memoria raw 8gb, ssd 250gb', 'Marca intel', 200000.99, 'negro', '1696633343497_img_.jpg'),
-       (2, 1, 'PC GAMER MEDIA', 'Procesador i5 10gen, memoria raw 16gb, ssd 500gb', 'MArca intel', 300000.99, 'Azul', '1696630810297_img_.jpg'),
-       (3, 2, 'Laptop 15.6', 'prosesador intel i5, memoria raw 16gb, ssd 500gb', 'Marca Asus', 290000.99, 'Gris', '1696548852316_img_.jpg');
+VALUES (1, 1, 'PC GAMER BASIC', 'Procesador i3 10gen, memoria raw 8gb, ssd 250gb', 'intel', 200000.99, 'negro', '1696633343497_img_.jpg'),
+       (2, 1, 'PC GAMER MEDIA', 'Procesador i5 10gen, memoria raw 16gb, ssd 500gb', 'intel', 300000.99, 'Azul', '1696630810297_img_.jpg'),
+       (3, 2, 'Laptop 15.6', 'prosesador intel i5, memoria raw 16gb, ssd 500gb', 'Asus', 290000.99, 'Gris', '1696548852316_img_.jpg');
 
 INSERT INTO usuario (id, nombre, apellido, nombre_de_perfi, email, password, imagen_de_perfil, perfil)
-VALUES (1, 'nahel', 'est', 'nahel', 'nahelest@gmail.com', '1234567890', '/imagenes/users/ADM.jpg', 'admin');
+VALUES (1, 'nahel', 'est', 'nahel', 'nahelest@gmail.com', '1234567890', '/imagenes/users/ADM.jpg', 'administrador');

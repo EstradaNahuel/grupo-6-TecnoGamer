@@ -8,7 +8,7 @@ const mainControllers = {
             "css":"styles"
         })
     },
-    register: (req,res)=>{
+    /*register: (req,res)=>{
         res.render("./users/register", {
             "title": "registro",
             "css":"register"
@@ -19,7 +19,7 @@ const mainControllers = {
             "title": "ingreso",
             "css":"login"
         })*/
-    },
+    //},
     productcart: (req,res)=>{
         res.render("./products/productcart", {
             "title": "carrito compras",

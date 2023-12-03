@@ -15,27 +15,27 @@
 
    <section class="menu-wrap">
      <% products.forEach(function(products) { %>
-       <a href="/products/detail/<%= products.id %>">
+       <a href="/products/detail/<%= products.Id %>">
          <article>
            <div class="img-container">
-             <img src="/imagenes/<%= products.image %>" alt=" <%= products.name %>">
+             <img src="/imagenes/<%= products.Imagen %>" alt=" <%= products.Nombre %>">
            </div>
            <p>informacion del producto:</p>
            <ul>
              <li>
-                Nombre: <%= products.name %>
+                Nombre: <%= products.Nombre %>
              </li>
              <li>
-                Descripcion: <%= products.description %>
+                Descripcion: <%= products.Descripcion %>
              </li>
              <li>
-                Marca:  <%= products.marca %>
+                Marca:  <%= products.Marca %>
              </li>
              <li>
-                Color:  <%= products.color %>
+                Color:  <%= products.Color %>
             </li>
             <li>
-                Precio:  <%= products.price %>
+                Precio:  <%= products.Precio %>
             </li>
            </ul>
          </article>

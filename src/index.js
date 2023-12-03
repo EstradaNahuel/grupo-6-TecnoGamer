@@ -20,7 +20,7 @@ app.use(session({secret: "login"}));
 //rutas
 app.use("/",mainRouter);
 app.use("/products", productRouter);
-app.use('/users', userRouter)
+app.use("/users", userRouter)
 app.listen(3020, () => {
   console.log("Success");
 });

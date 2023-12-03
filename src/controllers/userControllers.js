@@ -12,18 +12,16 @@ const userControllers=  {
   },
   registered: (req, res) => {
     const form = req.body;
-    const newImage = req.file ? '/users/' + req.file.filename : '';
+    const newImage = req.file ? './public/users' + req.file.filename : '';
     const hashPassword = bcrypt.hashSync(form.password, 10);
-    db.User.create({
+    db.Usuario.create({
       nombre: form.nombre,
       apellido: form.apellido,
       email: form.email,
       contrasenia: hashPassword,
-      categoria: form.categoria,
+      perfil: form.perfil,
       fecha_nacimiento: form.fecha_nacimiento,
-      imagen: newImage,
-      fecha_creacion: new Date().toLocaleDateString(),
-      fecha_modificacion: new Date().toLocaleDateString(),
+      imagen: newImage 
     }).then((newUser) => {
       console.log(newUser);
       return res.redirect("/");
@@ -38,7 +36,7 @@ const userControllers=  {
   },
   logging: (req, res) => {
     const form = req.body;
-    db.User.findOne({
+    db.Usuario.findOne({
         where: {
             email: form.email,
         },
@@ -48,7 +46,7 @@ const userControllers=  {
             req.session.user = user;
             return res.redirect("/");
         } else {
-            return res.render('./users/login', { error: 'Email o contraseña incorrectos' });
+            return res.render('login', { error: 'Email o contraseña incorrectos' });
         }
     })
     .catch(error => {
