@@ -8,7 +8,9 @@ const moment = require('moment');
 
 const productControllers = {
     list: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include: [{association: 'categoria'}]
+        })
         .then(products => {
             res.render('./products/list-product.ejs', { products })
         }) 
