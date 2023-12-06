@@ -37,7 +37,7 @@ const validation = {
       .withMessage('El campo contraseña no puede estar vacío'),
   ],
   register: [
-    body('nombre_de_perfi')
+    body('nombre_de_perfil')
       .notEmpty()
       .withMessage('El campo nombre no puede estar vacío')
       .bail()
@@ -73,13 +73,11 @@ const validation = {
       .bail()
       .isLength({ min: 8 })
       .withMessage('La contraseña debe tener al menos 8 caracteres'),
-    ,
     body('imagen_de_perfil')
       .custom((value, { req }) => {
         return req.file;
       })
       .withMessage('Debes subir una imagen')
-      .bail()
     ],
 
 };

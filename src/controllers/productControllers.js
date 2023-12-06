@@ -36,8 +36,8 @@ const productControllers = {
     },*/
     create: (req, res) => {
         db.Categoria.findAll()
-        .then( categoria => {
-            return res.render('./products/create-product', { categoria });
+        .then( Idcategoria => {
+            return res.render('./products/create-product', { Idcategoria });
         })  
     },
     store: (req, res) => {
@@ -47,7 +47,7 @@ const productControllers = {
         db.Product.create ({
             Nombre: form.Nombre,
             Descripcion: form.Descripcion,
-            Categoria: form.Categoria,
+            Idcategoria: form.Idcategoria,
             Color: form.Color,
             Precio: form.Precio,
             Marca: form.Marca,

@@ -10,20 +10,24 @@
         <%- include('../partials/header') %>
     </header>
 <section class="signup">
-    <form action='/users/register'  class="form-container" method="POST" enctype="multipart/form-data"></form>
+    <form action='/users/register'  class="form-container" method="POST" enctype="multipart/form-data">
         <h2 class="text-title">Registrarse</h2>
         <ul>
             <li>
                 <label for="username">Nombre de usuario</label>
-                <input type="text" name="username" placeholder="Nombre de usuario" required>
+                <input type="text" name="nombre_de_perfil" placeholder="Nombre de usuario" required>
             </li>
             <li>
                 <label for="name">Nombre</label>
-                <input type="text" name="firstname" placeholder="Nombre" required>
+                <input type="text" name="nombre" placeholder="Nombre" required>
             </li>
             <li>
                 <label for="surname">Apellido</label>
-                <input type="text" name="surname" placeholder="Apellido" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+            </li>
+            <li>
+                <label for="fecha">Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nacimiento" required>
             </li>
             <li>
                 <label for="email">Correo electrónico</label>
@@ -46,6 +50,7 @@
                 <label for="imagen">imagen de perfil</label>
                 <input type="file" name="imagen_de_perfil" required>      
             </li>
+            
             <li>
                 <input type="submit" value="Registrarse">
             </li>

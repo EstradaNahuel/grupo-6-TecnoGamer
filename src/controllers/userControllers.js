@@ -7,21 +7,60 @@ const sequelize = db.sequelize;
 const { validation } = require('express-validator');
 
 const userControllers=  {
-  register: (req, res) => {
+  /*register: (req, res) => {
     return res.render('./users/register');
   },
   registered: (req, res) => {
     const form = req.body;
     const newImage = req.file ? './public/users' + req.file.filename : '';
     const hashPassword = bcrypt.hashSync(form.password, 10);
+    console.log(req.body)
+    console.log(req.file)
     db.Usuario.create({
       nombre: form.nombre,
       apellido: form.apellido,
       email: form.email,
-      contrasenia: hashPassword,
+      password: hashPassword,
       perfil: form.perfil,
       fecha_nacimiento: form.fecha_nacimiento,
       imagen: newImage 
+    }).then((newUser) => {
+      console.log(newUser);
+      return res.redirect("/");
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).send('Hubo un error al registrar el usuario');
+    });
+  },*/
+  register: (req, res) => {
+    return res.render('./users/register');
+  },
+  processRegister: (req, res) => {
+    // Validación de datos
+    if (!req.body || !req.file) {
+      return res.status(400).send('Datos de formulario o archivo no proporcionados');
+    }
+  
+    const form = req.body;
+    const newImage = req.file ? './public/user' + req.file.filename : '';
+  
+    // Validación de contraseña
+    if (!form.password || form.password.length < 8) {
+      return res.status(400).send('La contraseña debe tener al menos 8 caracteres');
+    }
+  
+    const hashPassword = bcrypt.hashSync(form.password, 10);
+  
+    db.Usuario.create({
+      nombre: form.nombre,
+      apellido: form.apellido,
+      email: form.email,
+      password: hashPassword,
+      nombre_de_perfil: form.nombre_de_perfil,
+      perfil: form.perfil,
+      fecha_nacimiento: form.fecha_nacimiento,
+      imagen_de_perfil: newImage 
     }).then((newUser) => {
       console.log(newUser);
       return res.redirect("/");
@@ -42,7 +81,7 @@ const userControllers=  {
         },
     })
     .then((user) => {
-        if (user && bcrypt.compareSync(form.password, user.contrasenia)) {
+        if (user && bcrypt.compareSync(form.password, user.password)) {
             req.session.user = user;
             return res.redirect("/");
         } else {

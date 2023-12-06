@@ -3,7 +3,7 @@ const router = express.Router();
 const userControllers = require('../controllers/userControllers');
 //const { body, check } = require ('express-validator');
 const multer = require('multer');
-
+const path = require("path")
 const validations = require('../validator/validation');
 
 /*
@@ -59,6 +59,6 @@ router.get('/logout', function(req, res){
 })
 */
 router.get("/register", userControllers.register)
-router.post("/register", upload.single('imagen_de_perfil'), userControllers.registered)
+router.post("/register", upload.single('imagen_de_perfil'), validations["register"], userControllers.processRegister)
 
 module.exports = router;

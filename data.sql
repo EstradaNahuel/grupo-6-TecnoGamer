@@ -36,10 +36,11 @@ CREATE TABLE usuario (
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
     nombre_de_perfil VARCHAR(50) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(200) NOT NULL,
     imagen_de_perfil VARCHAR(255) NOT NULL,  
-    perfil ENUM('vendedor', 'comprador') NOT NULL
+    perfil ENUM('vendedor', 'comprador', 'administrador') NOT NULL
 );
 
 -- Crea la tabla Carrito
@@ -76,5 +77,5 @@ VALUES (1, 1, 'PC GAMER BASIC', 'Procesador i3 10gen, memoria raw 8gb, ssd 250gb
        (2, 1, 'PC GAMER MEDIA', 'Procesador i5 10gen, memoria raw 16gb, ssd 500gb', 'intel', 300000.99, 'Azul', '1696630810297_img_.jpg'),
        (3, 2, 'Laptop 15.6', 'prosesador intel i5, memoria raw 16gb, ssd 500gb', 'Asus', 290000.99, 'Gris', '1696548852316_img_.jpg');
 
-INSERT INTO usuario (id, nombre, apellido, nombre_de_perfi, email, password, imagen_de_perfil, perfil)
-VALUES (1, 'nahel', 'est', 'nahel', 'nahelest@gmail.com', '1234567890', '/imagenes/users/ADM.jpg', 'administrador');
+INSERT INTO usuario (id, nombre, apellido, nombre_de_perfi, fecha_nacimiento,email, password, imagen_de_perfil, perfil)
+VALUES (1, 'nahel', 'est', 'nahel', '22-11-2023','nahelest@gmail.com', '1234567890', '/imagenes/users/ADM.jpg', 'administrador');

@@ -48,3 +48,14 @@
 .loginform input[type="submit"]:hover {
     background-color: #000000;
 }
+.loginform input[type="button"] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #ee1212;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.loginform input[type="button"]:hover {
+    background-color: #000000;
+}

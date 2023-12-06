@@ -16,15 +16,15 @@
 .signup li {
     margin-bottom: 1em;
 }
-.signup label[for="username"],
-.signup label[for="email"],
-.signup label[for="password"]{
+.signup label[for=""],
+.signup label[for=""],
+.signup label[for=""]{
    display: none;
 }
 .signup label {
     display: block;
     font-size: 0.9em;
-    color: #000000;
+    color: #ffffff;
 }
 
 .signup input[type="text"],

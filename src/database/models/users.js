@@ -14,8 +14,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(50),
             allowNull: false
         },
-        nombre_de_perfi: {
+        nombre_de_perfil: {
             type: dataTypes.STRING(50),
+            allowNull: false
+        },
+        fecha_nacimiento: {
+            type: dataTypes.DATE,    
             allowNull: false
         },
         email: {
@@ -31,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         perfil: {
-            type: dataTypes.ENUM('vendedor', 'comprador'),
+            type: dataTypes.ENUM('vendedor','administrador', 'comprador'),
             allowNull: false
         }
     };
