@@ -1,21 +1,41 @@
 <header>
-    <nav class="top-header">
-       <ul class="nav-1">
-          <li>
-             <a href="/users/register" title="Haga clic aquí para registrarse">Registrarse</a>
-             <a href="/users/login" title="Haga clic aquí para iniciar sesión">Iniciar sesión</a>
-             <a href="productcart" title="Haga clic aquí para ver su carrito de compras">Carrito de compras</a>
-          </li>
-       </ul>
-    </nav>
- <div class="media-header">
-    <div class="logo">
-       <img id="logo" class="w-50" src= "/imagenes/logo-1.jpg" alt="bienvenidos!" />
-    </div>
-    <div class="form" action="#" method="GET">
-       <input type="text" placeholder="Buscar productos, marcas y más">
-       <div class="submit"><i class="fa fa-search"></i></div>
-       <i class="fa-regular fa-circle-user fa-beat"></i>
-   </div>
- </div>   
+   <div class="media-header">
+      <div class="logo">
+        <img class="imgLogo" src= "/imagenes/logo-2.jpg" alt="bienvenidos!" />
+      </div>
+      <div class="containerSearch">
+         <div class="form" action="#" method="GET">
+            <input id="inputSearch" type="text" placeholder="Buscar productos, marcas y más" {color:white}>
+           <div class="submit"><i class="fa fa-search"></i></div>     
+        </div>
+      </div>
+      
+      <nav class="top-header">
+         <ul class="nav-1">
+            <li class="itemHears">
+               <a href="/users/register" title="registrarse">Registrarse</a>   
+               <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </li>
+            <li class="itemHears">
+              <a href="/users/login" title="sesión">Iniciar sesión</a>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </li>
+            <li class="itemHears">
+              <a href="productcart" title="carritoCompras">Mis compras</a>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+           </li>
+         </ul>
+      </nav>
+   </div> 
+   <section class="sectionheader">
+      <nav>
+         <ul class="nav-2">
+         <li class="item"><a href="/products/list">Prodúctos</a></li>
+         <li class="item"><a href="#">Armá tu Pc</a></li>
+         <li class="item"><a href="#">Hardware</a></li>
+         <li class="item"><a href="#">PC Armada</a></li>
+         <li class="item"><a href="#">Ofertás</a></li>
+         </ul>
+      </nav>
+   </section>  
 </header>
