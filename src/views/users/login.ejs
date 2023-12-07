@@ -18,12 +18,17 @@
         <ul>
             <li>
                 <label for="usermail">Correo electrónico</label>
-                <input type="email" name="usermail" placeholder="tunombre@correoelectrónico.com" required>
+                <input type="email" name="email" placeholder="tunombre@correoelectrónico.com" required>
             </li>
             <li>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" placeholder="contraseña" required>
             </li>
+            <% if (locals.error) {  %>
+            <li>
+                <%= error %>
+            </li>
+            <% } %>
             <li>
                <input type="submit" value="Iniciar sesion">
             </li>

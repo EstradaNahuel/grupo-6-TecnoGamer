@@ -6,27 +6,6 @@ const multer = require('multer');
 const path = require("path")
 const validations = require('../validator/validation');
 
-/*
-const validation = [
-    body('name')
-        .notEmpty()
-        .withMessage('Campo vacio'),
-    body('email')
-        .notEmpty()
-        .withMessage('Campo vacio')
-        .bail()
-        .isEmail()
-        .withMessage('formato invalido')
-        .bail()
-        .custom((value) => {
-        const userFound = users.find((user) => user.email === value);
-        if (!userFound) {
-          return false;
-        }
-        return true;
-        })
-]
-*/
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './public/user');
