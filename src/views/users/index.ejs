@@ -6,7 +6,39 @@
       
    <%- include('../partials/header') %>
    <img class="banner1" src="/imagenes/banner1.jpg" alt="no te pierdas de estas ofertas" />
-    <main>
+   
+   <div id="carrusel">
+      /*imagenes en formato jpg de https://fullh4rd.com.ar/*/
+      <div class="itemCarrusel" id="item1">
+         <div class="tarjetasCarrusel" id="tarjeta1">
+            <img src="/imagenes/carrusel1.jpg" alt="carruselImg1">
+         </div>
+         <div class="flechasCarrusel">
+            <a href="#item3"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <a href="#item2"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+         </div>
+       </div>
+       <div class="itemCarrusel" id="item2">
+         <div class="tarjetasCarrusel" id="tarjeta2">
+            <img src="/imagenes/carrusel2.jpg" alt="carruselImg2">
+         </div>
+         <div class="flechasCarrusel">
+            <a href="#item1"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <a href="#item3"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+         </div>
+       </div>
+       <div class="itemCarrusel" id="item3">
+         <div class="tarjetasCarrusel" id="tarjeta3">
+            <img src="/imagenes/carrusel3.jpg" alt="carruselImg3">
+         </div>
+         <div class="flechasCarrusel">
+            <a href="#item2"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <a href="#item1"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+         </div>
+       </div>
+    </div>
+   
+   <main>
       <h2 class="text-title">RECOMENDACIONES </h2>
       <section class="recomendados">
          <article class="articleRecomendado">
@@ -125,6 +157,7 @@
             </div>   
       </section>
     </main>
+
     <%- include('../partials/footer') %>
  </body>
 </html>
