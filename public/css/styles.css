@@ -48,7 +48,7 @@ header{
   display: flex;
   list-style: none;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .itemHears{
   display: flex;
@@ -94,9 +94,7 @@ nav .nav-2 li{
   background-color: #1e1d1d;
 }
 /*___________________________________________ */
-/* .padding {
-  padding: 24px;
-} */
+
 button{
   /*padding:7px;*/
   border: radius 5px;
@@ -104,7 +102,6 @@ button{
   color: black;
   font-size:18px;
   margin-top: 5px;
-  /*background-color: rgb(103, 101, 101);*/
   border: 2px solid #191919;
 
 }
@@ -131,7 +128,7 @@ main {
 body {
   font-family: "Roboto";
   font-size: 12px;
-  background-color: #ebebeb;
+  background-color: #1e1d1d;
 }
 
 .text-title {
@@ -238,16 +235,16 @@ h1, h2, h3 {
   font-size :24px ;
   text-align :center ;
 }
-.burger-menu {
+/* .burger-menu {
   background-color: rgb(228, 50, 19);
   font-size: 24px;
   width: 40px;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-left: 0; /* Change margin-left to 0 */
+  margin-left: 0; /* Change margin-left to 0 
   margin-right: auto;
   border-radius: 5px;
-}
+} */
 
 /*Main*/
 main .text-title {
@@ -262,10 +259,7 @@ main .text-title {
   /*main section recomendados*/
 .recomendados{
   display: flex;
-  padding-left: 15%;
-  padding-right: 15%;
-  
-
+  justify-content: space-around;
 }
 .articleRecomendado{
   justify-content: center;
@@ -290,8 +284,7 @@ main .text-title {
  /*main section destacados*/
 .destacados{
   display: flex;
-  padding-left: 15%;
-  padding-right: 15%;
+  justify-content: space-around;
 }
 .articleDestacado{
   justify-content: center;
@@ -315,7 +308,7 @@ main .text-title {
 }
 /*main section marcas*/ 
 
-.marcas{
+/* .marcas{
   display: flex;
   padding-left: 5%;
   padding-right: 5%;
@@ -325,6 +318,16 @@ main .text-title {
   height: 50px;
   width: 100%;
   object-fit: cover;
+} */
+
+.listaMarcas{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.marcasBanner{
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 /*footer*/
@@ -379,7 +382,7 @@ main .text-title {
  /*Carrucel*/
  .itemCarrusel{
   border: 10px solid #1e1d1d;
-  height: 400px;
+  height: 440px;
   position: relative;
  }
  .tarjetasCarrusel{
@@ -396,12 +399,13 @@ main .text-title {
   padding: 20px;
  }
  #carrusel {
-  height: 400px;
+  height: 440px;
   overflow: hidden;
  }
 .flechasCarrusel a{
   text-decoration: none;
   color: whitesmoke;
+  border: white solid 1px;
 }
 .tarjetasCarrusel img{
   width: 100%;
