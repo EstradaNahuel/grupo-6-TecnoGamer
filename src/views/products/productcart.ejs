@@ -12,8 +12,8 @@
     </header>
     <main>
         <section aria-label="Carrito de compras"> 
-            <table class="cart">
-                <caption>Lista de productos en el carrito</caption> 
+           <h1>Lista de productos en el carrito</h1> 
+            <table class="cart-table">
                 <thead>
                     <tr>
                         <th scope="col">Imagen</th> 
@@ -23,29 +23,43 @@
                         <th scope="col">Subtotal</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="/imagenes/recomendacion1.jpg" alt=""></td>
+                        <td>
+                            <div class="text">
+                               <p class="text-desc">PC GAMER BASIC</p>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="text-price">$150.000</p>
+                            <p class="text-discount">10%OFF</p>
+                        </td>
+                        <td>1</td>
+                        <td>$150.000</td>
+                    </tr>
+                </tbody>
+                
                 <tbody class="cart-table__body">
                     <!-- Aquí se mostrarán los productos agregados al carrito -->
                 </tbody>
             </table>
             <div class="cart-coupon">
                 <label for="coupon-code">Código de descuento:</label>
-                <input type="text" id="coupon-code" class="cart-coupon__code">
+                <input type="text" id="coupon-code" class="cart-coupon__code" required>
                 <button class="cart-coupon__apply">Aplicar</button>
             </div>
-            <div class="cart-total">
-                Total: $<span class="cart-total__amount">0.00</span>
-            </div>
-            <button class="cart-checkout">Finalizar compra</button>
+            <footer>
+                <div class="cart-total" aria-live="polite">
+                    <li>Total: $<span class="cart-total__amount">150.000</span></li>
+                </div>
+                <button class="cart-checkout">Finalizar compra</button>
+            </footer>
         </section>
     </main>
     
-</body>
-</html>
-
-
     <footer>
            <%- include('../partials/footer') %> 
     </footer>
-
 </body>
 </html>

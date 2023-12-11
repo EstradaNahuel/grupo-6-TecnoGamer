@@ -1,5 +1,5 @@
 /* Estilos para la tabla del carrito */
-.cart-table {
+/*.cart-table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -16,14 +16,14 @@
 }
 
 /* Estilos para el total del carrito */
-.cart-total {
+/*.cart-total {
     margin-top: 16px;
     font-size: 24px;
     font-weight: bold;
 }
 
 /* Estilos para el botón de finalizar compra */
-.cart-checkout {
+/*.cart-checkout {
     display: block;
     margin-top: 16px;
     padding: 12px 20px;
@@ -36,4 +36,144 @@
 
 .cart-checkout:hover {
     background-color: #000000;
+}
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 29, 29);
+}
+
+h1 {
+    color: #b8b5b5; /* Color del texto */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    font-size: 2em; /* Tamaño de la letra */
+    text-align: center; /* Alineación del texto */
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px 
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilo para la imagen del producto */
+img {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* El alto se ajusta automáticamente para mantener la relación de aspecto */
+}
+
+/* Estilo para los detalles del producto */
+.text-detalles {
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo para el nombre del producto */
+.text-desc {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espacio debajo del nombre del producto */
+    color: white;
+    
+}
+
+/* Estilo para el precio del producto */
+.text-price {
+    color: white; /* Color del texto */
+    margin-bottom: 10px; /* Espacio debajo del precio del producto */
+}
+
+/* Estilo para el descuento del producto */
+.text-discount {
+    color: red; /* Color del texto */
+    margin-bottom: 10px; /* Espacio debajo del descuento del producto */
+}
+
+table th {
+    background-color: red;
+}
+
+td {
+    color: white;
+}
+
+.cart-table {
+    color: white;
+}
+
+li {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.cart-coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-coupon__code {
+    width: 70%;
+    padding: 10px;
+}
+
+.cart-coupon__apply {
+    width: 25%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-checkout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #070707;
+}
+.cart-checkout {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
