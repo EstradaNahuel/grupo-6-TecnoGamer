@@ -1,9 +1,9 @@
 body{
-    background-color: #362E2D;
+    background-color: #1e1d1d;
     font-family: Arial, sans-serif;
 }
 h3{
-    color: white;
+    color:#b8b5b5;
 }
 .product-detail img{
     height: 350px;
@@ -13,12 +13,18 @@ h3{
 .product-detail{
     display: flex;
     justify-content:center;
+    border: 2px solid #E3311D;
+    border-radius: 8px;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 5px;
 }
 .botons button{
     padding: 9px 20px;
     background-color: red;
     color: white;
     border: none;
+    border-radius: 2px;
 }
  .product-detail__info{
     display: flex;
@@ -29,6 +35,7 @@ h3{
 .botons{
     padding-left: 20px;
     position:unset;
+
 }
 .product-detail__price {
     padding-left: 20px;

@@ -1,0 +1,28 @@
+h1{
+    color: #b8b5b5;
+    padding: 20px;
+}
+
+.delete-product{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #E3311D;
+    border-radius: 8px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.botonBorrar{
+    padding: 9px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+a ,h2{
+    padding-top: 5%;
+    text-decoration: none;
+    color: white;
+}

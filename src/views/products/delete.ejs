@@ -3,23 +3,29 @@
 
 <head>
     <%- include('../partials/head') %>
-  </head>
+    <link rel="stylesheet" href="/css/delete-product.css" />
+</head>
   
   <body>
     <%- include('../partials/header')%>
+
     <h1>Eliminar Producto </h1>
-    <h4>Estas por borrar este producto : <%= product.Nombre %></h4>
-    <p>
+    <div class="delete-product">
+        <h2> <%= product.Nombre %></h2>
+     <p>
         <form action="/products/delete/<%= product.Id %>?_method=DELETE" method="POST">
             <br>
             <div> 
-                <button class="botonBorrar" type="submit">Borrar el Producto</button>
+                <button class="botonBorrar" type="submit">Eliminar Producto</button>
             </div>
+            <br>
             <div>
                 <a href="/products/list">Listado de Productos</a>
             </div>
         </form>
-    </p>
+     </p>
+    </div>
+    
     <%- include('../partials/footer') %>
 </body>
 

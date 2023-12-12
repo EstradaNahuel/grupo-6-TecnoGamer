@@ -34,7 +34,7 @@ input[type="text"] {
 
 input {
   border: 2px solid red; /* Borde de color rojo */
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 2px; /* Bordes redondeados */
 }
 
 .custom-file-upload {
