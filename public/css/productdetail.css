@@ -1,0 +1,42 @@
+body{
+    background-color: #362E2D;
+    font-family: Arial, sans-serif;
+}
+h3{
+    color: white;
+}
+.product-detail img{
+    height: 350px;
+    object-fit: cover;
+    padding: 20px;
+}
+.product-detail{
+    display: flex;
+    justify-content:center;
+}
+.botons button{
+    padding: 9px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+ .product-detail__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+} 
+.botons{
+    padding-left: 20px;
+    position:unset;
+}
+.product-detail__price {
+    padding-left: 20px;
+}
+p, span{
+    color: white;
+
+}
+span{
+    padding-top: 10px;
+}

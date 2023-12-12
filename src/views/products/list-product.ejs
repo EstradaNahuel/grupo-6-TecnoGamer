@@ -11,7 +11,7 @@
 
  <div class="ps-content">
 
-   <h1>listado de productos:</h1>
+   <h1>Listado de prodúctos:</h1>
 
    <section class="menu-wrap">
      <% products.forEach(function(products) { %>
@@ -20,24 +20,27 @@
            <div class="img-container">
              <img src="/imagenes/<%= products.Imagen %>" alt=" <%= products.Nombre %>">
            </div>
-           <p>informacion del producto:</p>
-           <ul>
-             <li>
-                Nombre: <%= products.Nombre %>
-             </li>
-             <li>
-                Descripcion: <%= products.Descripcion %>
-             </li>
-             <li>
+           <div class="detail-product">
+            <p>Información del prodúcto:</p>
+            <ul>
+              <li>
+                  Nombre: <%= products.Nombre %>
+              </li>
+              <li>
+                  Descripción: <%= products.Descripcion %>
+              </li>
+              <li>
                 Marca:  <%= products.Marca %>
-             </li>
-             <li>
+              </li>
+              <li>
                 Color:  <%= products.Color %>
-            </li>
-            <li>
+              </li>
+              <li>
                 Precio:  <%= products.Precio %>
-            </li>
-           </ul>
+              </li>
+            </ul>
+           </div>
+           
          </article>
        </a>
      <% }) %>

@@ -8,25 +8,30 @@
 <body>
     <%- include('../partials/header') %>
     <a href="/products/detail/<%= product.Id %>"></a>
-    <h3>Detalle de Producto</h3>
+    <h3>Detalle de producto</h3>
+    <br>
     <div class="product-detail">
         <img src="/imagenes/<%= product.Imagen %>" alt="Imagen del producto" class="product-detail__img">
         <div class="product-detail__info">
-            <p class="product-detail__title"><%= product.Nombre %></p>
-            <p class="product-detail__description"><%= product.Descripcion %></p>
+            <p class="product-detail__title">Nombre: <%= product.Nombre %></p>
+            <p class="product-detail__description">Descripción: <%= product.Descripcion %></p>
             <p class="product-detail__category">Categoría: <%= product.Idcategoria %></p>
             <p class="product-detail__color">Color: <%= product.Color %></p>
-            <span class="product-detail__price">$<%= product.Precio %></span>
-            <a href="/productcart"></a>
-            <button class="product-detail__add-to-cart">Añadir al carrito</button>
-            <a href="/products/edit/<%= product.Id %>" class="">
-              <button>Editar productos</button>
-            </a>
-            <a href="/products/delete/<%= product.Id %>" class="">
-                <button>Eliminar productos</button>
-              </a>
+            <span class="product-detail__price">Precio: $<%= product.Precio %></span>
+            <br>
+            <br>
+            <div class="botons">
+                <a href="/productcart"></a>
+                <button class="product-detail__add-to-cart">Añadir al carrito</button>
+                <a href="/products/edit/<%= product.Id %>" class="">
+                <button>Editar producto</button>
+                </a>
+                <a href="/products/delete/<%= product.Id %>" class="">
+                <button>Eliminar producto</button>
+                </a>
+            </div>
+            
         </div>        
-        </div>
     </div>
     <%- include('../partials/footer') %>
 </body>
