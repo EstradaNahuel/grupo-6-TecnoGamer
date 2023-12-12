@@ -6,32 +6,32 @@
   </head>
 <body>
   <%- include('../partials/header')%>
-<h2>Formulario de Edición de Producto</h2>
+<h2>Edición de Producto</h2>
 
 <form action="/products/edit/<%= product.Id %>?_method=PUT" method="POST" enctype="multipart/form-data">
   <label for="pid">Id del Producto:</label>
-  <input type="text" id="id" name="id">
+  <input type="text" id="id" name="id" value="<%= product.Id %>">
   
   <label for="pname">Nombre del Producto:</label>
   <input type="text" id="pname" name="Nombre" value="<%= product.Nombre  %>">
   
   <label for="pdesc">Descripción del Producto:</label>
-  <input type="text" id="pdesc" name="Descripcion"><%= product.Descripcion  %>
+  <input type="text" id="pdesc" name="Descripcion" value="<%= product.Descripcion  %>">
   
   <label for="pcategory">Categoría del Producto:</label>
-  <input type="text" id="pcategory" name="category"><%= product.category  %>
+  <input type="text" id="pcategory" name="Idcategoria" value="<%= product.Idcategoria %>">
   
   <label for="pcolor">Color del Producto:</label>
-  <input type="text" id="pcolor" name="Color"><%= product.Color  %>
-
-  <label for="pcolor">Marca del Producto:</label>
-  <input type="text" id="pcolor" name="Marca"><%= product.Marca  %>
+  <input type="text" id="pcolor" name="Color" value="<%= product.Color %>">
   
-  <label for="image">Imagen:</label>
-  <input type="file" name="Imagen" value="<%=  product.Imagen %>">
+  <label for="pcolor">Marca del Producto:</label>
+  <input type="text" id="pcolor" name="Marca" value="<%= product.Marca %>">
+ 
+  <label for="product-image" class="custom-file-upload">Imagen del Producto:</label>
+  <input type="file" id="product-image" name="Imagen" value="<%= product.Imagen %>">
   
   <label for="pprice">Precio del Producto:</label>
-  <input type="text" id="pprice" name="Precio" value="<%=  product.Precio %>">
+  <input type="text" id="pprice" name="Precio" value="<%= product.Precio %>">
   
   <input type="submit" value="Actualizar">
   

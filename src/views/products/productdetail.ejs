@@ -17,8 +17,8 @@
             <p class="product-detail__category">Categoría: <%= product.Idcategoria %></p>
             <p class="product-detail__color">Color: <%= product.Color %></p>
             <span class="product-detail__price">$<%= product.Precio %></span>
-            <a href="/productcart"></a>
-            <button class="product-detail__add-to-cart">Añadir al carrito</button>
+            <a href="/productcart">
+            <button class="product-detail__add-to-cart">Añadir al carrito</button></a>
             <a href="/products/edit/<%= product.Id %>" class="">
               <button>Editar productos</button>
             </a>
