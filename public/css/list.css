@@ -79,3 +79,19 @@ padding-bottom: 5px;
 color: black;
 background: linear-gradient(white,#AAACA1);
 }
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; 
+}
+button:hover {
+  background-color: #070707;
+  text-decoration: none;
+}
