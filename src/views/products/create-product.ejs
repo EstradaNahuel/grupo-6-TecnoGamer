@@ -9,33 +9,34 @@
  <header>
     <%- include('../partials/header') %>
   </header>
-<h2>Formulario de Creación/Subida de Producto</h2>
+ <main>
+  <h2>Producto Nuevo</h2>
 
-<form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
-  <label for="name">Nombre del Producto:</label>
-  <input type="text" id="name" name="Nombre" required>
+  <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
+    <label for="name">Nombre del Producto:</label>
+    <input type="text" id="name" name="Nombre" required>
   
-  <label for="description">Descripción del Producto:</label>
-  <input type="text" id="description" name="Descripcion" required>
+    <label for="description">Descripción del Producto:</label>
+    <input type="text" id="description" name="Descripcion" required>
   
-  <label for="category">Categoría del Producto:</label>
-  <input type="text" id="Idcategoria" name="Idcategoria" required>
+    <label for="category">Categoría del Producto:</label>
+    <input type="text" id="Idcategoria" name="Idcategoria" required>
   
-  <label for="color">Color del Producto:</label>
-  <input type="text" id="color" name="Color" required>
+    <label for="color">Color del Producto:</label>
+    <input type="text" id="color" name="Color" required>
   
-  <label for="price">Precio del Producto:</label>
-  <input type="text" id="price" name="Precio" required>
+    <label for="price">Precio del Producto:</label>
+    <input type="text" id="price" name="Precio" required>
 
-  <label for="price">Marca del Producto:</label>
-  <input type="text" id="price" name="Marca" required>
+    <label for="price">Marca del Producto:</label>
+    <input type="text" id="price" name="Marca" required>
   
-  <label for="image">Imagen del Producto:</label>
-  <input type="file" id="image" name="Imagen" required>
+    <label for="file-upload" class="custom-file-upload">Imagen del Producto:</label>
+    <input type="file" id="file-upload" name="Imagen" required>
   
-  <input type="submit" value="Agregar Producto">
-  
-</form> 
+    <input type="submit" value="Agregar Producto">
+  </form> 
+</main>
 <footer>
   <%- include('../partials/footer') %>
 </footer>
