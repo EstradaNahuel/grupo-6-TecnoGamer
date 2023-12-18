@@ -1,28 +1,30 @@
-import React, { useEffect } from 'react';
-import TopBar from './TopBar';
+import React from 'react';
 import ContentRowTop from './ContentRowTop';
-//import Footer from ';
+import Footer from './Footer';
+import TopBar from './TopBar';
 
-function ContentWrapper(){
-    useEffect(() => {
-        fetch('localhost:3020/api/products') 
-            .then(response => response.json())       
-            .then(data => console.log(data))
-            .catch(error => console.error('Error:', error));
-    }, []);
+function ContentWrapper() {
+  return (
+    <>
+      <div id="content-wrapper" className="d-flex flex-column">
+        {/* Main Content */}
+        <div id="content">
+          {/* Topbar */}
+          <TopBar />
+          {/* End of Topbar */}
 
-    return (
-        <>
-            {/*<!-- Content Wrapper -->*/}
-            <div id="content-wrapper" className="d-flex flex-column">
-                {/*<!-- Main Content -->*/}
-                <div id="content">
-                    <TopBar />
-                    <ContentRowTop />
-                    <Footer />
-                </div>
-            </div>    
-        </>
-    )
+          {/* Content Row Top */}
+          <ContentRowTop />
+          {/*End Content Row Top*/}
+        </div>
+        {/* End of MainContent */}
+
+        {/* Footer */}
+        <Footer />
+        {/* End of Footer */}
+      </div>
+    </>
+  );
 }
+
 export default ContentWrapper;
