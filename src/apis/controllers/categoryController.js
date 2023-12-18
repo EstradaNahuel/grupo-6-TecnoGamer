@@ -9,9 +9,9 @@ const categoryApiController = {
                 const data = []
                 categorias.forEach(category => { 
                     const dataCategory = {
-                        Idcategoria: category.id,
+                        Idcategoria: category.Idcategoria,
                         Nombre: category.Nombre,
-                        detail: `/api/categoria/${category.Idcategoria}`
+                        detail: `localhost:3020/api/categoria/${category.Idcategoria}`
                     }
                     data.push (dataCategory)
                 });
@@ -31,7 +31,7 @@ const categoryApiController = {
             .then(categoria => {
                 return res.json({
                     Categoria: {
-                        Idcategoria: categoria.id,
+                        Idcategoria: categoria.Idcategoria,
                         Nombre: categoria.Nombre
                     }
                 })

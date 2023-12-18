@@ -52,3 +52,37 @@
 .signup input[type="submit"]:hover {
     background-color: #070707;
 }
+label {
+    color: #333; /* Cambia el color del texto del label a gris oscuro */
+    font-weight: bold; /* Hace que el texto del label sea negrita */
+}
+
+input[type="date"] {
+    width: 100%; /* Establece el ancho del campo de entrada al 100% del contenedor */
+    padding: 10px; /* Agrega un padding alrededor del campo de entrada */
+    border: 2px solid red; /* Agrega un borde alrededor del campo de entrada */
+}
+
+label {
+    color: #333; /* Cambia el color del texto del label a gris oscuro */
+    font-weight: bold; /* Hace que el texto del label sea negrita */
+}
+
+select {
+    width: 100%; /* Establece el ancho del campo de entrada al 100% del contenedor */
+    padding: 10px; /* Agrega un padding alrededor del campo de entrada */
+    border: 2px solid red; /* Agrega un borde alrededor del campo de entrada */
+}
+
+label {
+    color: #333; /* Cambia el color del texto del label a gris oscuro */
+    font-weight: bold; /* Hace que el texto del label sea negrita */
+}
+
+input[type="file"] {
+    width: 100%; /* Establece el ancho del campo de entrada al 100% del contenedor */
+    padding: 10px; /* Agrega un padding alrededor del campo de entrada */
+    border: 2px solid red; /* Agrega un borde alrededor del campo de entrada */
+    color: white
+}
+

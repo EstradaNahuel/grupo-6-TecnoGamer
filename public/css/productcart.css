@@ -165,6 +165,7 @@ a {
 }
 button:hover {
     background-color: #070707;
+    border-radius: 12px;
 }
 .cart-checkout {
     animation: pulse 2s infinite;

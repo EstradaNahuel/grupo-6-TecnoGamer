@@ -19,7 +19,7 @@ const userApiControllers = {
                         email: user.email,
                         perfil: user.perfil,
                         imagen_de_perfil: user.imagen_de_perfil,
-                        detail: "/api/users/" + user.Id
+                        detail: "localhost:3020/api/users/" + user.Id
                     };
                     data.push(dataUser);
                 });

@@ -19,7 +19,7 @@ const productApiController = {
                         Imagen: product.Imagen,
                         Precio: product.Precio,
                         Color: product.Color,
-                        detail: `/api/products/${product.Id}`
+                        detail: `localhost:3020/api/products/${product.Id}`
                     }
                     data.push (dataProduct)
                 });
@@ -46,7 +46,7 @@ const productApiController = {
                         Marca: producto.Marca,
                         Precio: producto.Precio,
                         Color: producto.Color,
-                        Imagen: "http://yourdomain.com/imagenes" + producto.Imagen,
+                        Imagen: "/imagenes" + producto.Imagen,
                 }})
             })
     }
